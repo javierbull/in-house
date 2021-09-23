@@ -1,0 +1,149 @@
+/* Laptop */
+@media (max-width: 1366px) {}
+
+/* Fin laptop */
+/* Tablet landscape */
+@media (max-width: 1024px) {}
+
+/* Fin tablet landscape */
+/* Big cell landscape */
+@media (max-width: 823px) {
+  .navbar {
+    /* background-color: lavender; */
+    padding: .5rem 2rem;
+  }
+
+  .wrap-img-login {
+    display: none;
+  }
+
+  .wrap-form-login {
+    /* background-color: salmon; */
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+
+  footer {
+    /* background-color: pink; */
+    height: auto;
+    padding: .5rem 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Fin cell landscape */
+/* Tablet portrait */
+@media (max-width: 768px) {
+  .navbar {
+    /* background-color: lavender; */
+    padding: .5rem 2rem;
+    height: 4rem;
+  }
+
+  .wrap-img-login {
+    display: none;
+  }
+
+  .wrap-form-login {
+    /* background-color: purple; */
+    height: 100vh;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+/* fin tablet portrait */
+/* Cell landscape */
+@media (max-width: 736px) {
+  .navbar {
+    /* background-color: lavender; */
+    padding: .5rem 1rem;
+    height: 3rem;
+  }
+
+  .navbar .navbar-brand img {
+    height: 1.5rem;
+  }
+
+  .wrap-img-login {
+    display: none;
+  }
+
+  .wrap-form-login {
+    /* background-color: salmon; */
+    height: auto;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    /* background-color: pink; */
+    height: auto;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+/* Fin cell landscape */
+/* Small cell landscape */
+@media (max-width: 568px) {
+  .wrap-img-login {
+    display: none;
+  }
+}
+
+/* Fin small cell landscape */
+/* Cell portrait */
+@media (max-width: 480px) {
+  .wrap-img-login {
+    display: none;
+  }
+
+  .wrap-form-login {
+    height: 100vh;
+    padding-top: 3rem;
+  }
+
+  .wrap-form-login .card {
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+}
+
+/* Fin cell portrait */
+/* Small cell portrait */
+@media (max-width: 360px) {
+  .wrap-form-login {
+
+  }
+
+  .wrap-form-login .card {
+    padding: 1rem 0;
+  }
+}
+
+/* Fin small cell portrait */

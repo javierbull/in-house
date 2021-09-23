@@ -1,0 +1,94 @@
+main {
+  background-color: lavender;
+  min-height: 100vh;
+}
+
+/* SIDEBAR OFF-CANVAS */
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+
+.bs-canvas-overlay.show {
+   opacity: 0.85;
+   z-index: 1100;
+}
+
+.bs-canvas {
+   top: 0;
+   width: 0;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+.bs-canvas-left {
+   left: 0;
+}
+
+.bs-canvas-right {
+   right: 0;
+}
+
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+/* FIN SIDEBAR OFF-CANVAS */
+
+/* MEGA MENU */
+/* Navigation Sub
+------------------------------------- */
+nav.sub {
+	border-bottom: 1px solid #ebebeb;
+	padding: 10px 0;
+}
+
+/* Navigation Main
+------------------------------------- */
+nav.main {
+
+}
+nav.main .nav-logo {
+	max-width: 200px;
+	width: 100%;
+}
+nav.main ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+/* ------ Mega Menu ------ */
+nav.main .megamenu {
+	padding: 20px 20px;
+	position: absolute;
+	top: auto;
+	left: 0;
+	right: 0;
+	max-width: 1500px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* ------ Mid Menu ------ */
+nav.main .midmenu {
+	position: absolute;
+	padding: 20px 20px;
+	float: left;
+	top: auto;
+	left: auto;
+	right: auto;
+	max-width: 650px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.dropdown-menu.megamenu.midmenu.show {
+    right: 0;
+  }
+  .dropdown-menu.show {
+    right: 0;
+  }
+
+/* FIN MEGA MENU */

@@ -1,0 +1,5150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Bee Cloud</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<meta name="description" content="Sistema Bee Cloud">
+	<link rel="icon" href="img/icons/favicon.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<!-- Fonts and icons -->
+	<script src="js/plugin/webfont/webfont.min.js"></script>
+
+	<link href="css/fonts.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS Files -->
+	<link rel="stylesheet" type="text/css" href="js/plugin/datatables/datatables.css" />
+	<link rel="stylesheet" type="text/css" href="js/plugin/datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+	<link href="js/plugin/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+	<link rel="stylesheet" href="js/plugin/select2/select2.css">
+	<link rel="stylesheet" href="js/plugin/select2/select2-bootstrap4.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/mq.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header">
+
+				<a href="index.html" class="logo d-flex align-items-center">
+					<img src="img/logos/imagotipo-bee.png" alt="Bee Cloud Imagotipo" class="navbar-brand mr-2">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg">
+
+				<div class="container-fluid">
+
+					<!-- <div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Buscar" class="form-control">
+							</div>
+						</form>
+					</div> -->
+
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<!-- <li class="nav-item toggle-nav-search hidden-caret">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+								<i class="fa fa-search"></i>
+							</a>
+						</li> -->
+
+						<li class="nav-item dropdown hidden-caret">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<div class="avatar-sm">
+									<img src="img/users/profile1.jpg" alt="profile-pic" class="avatar-img rounded-circle">
+								</div>
+							</a>
+							<ul class="dropdown-menu dropdown-user dropdown-menu-right animated fadeIn">
+								<div class="dropdown-user-scroll scrollbar-outer">
+									<li>
+										<div class="user-box">
+											<div class="u-text">
+												<h4>Guilherme Neyra</h4>
+												<p class="text-muted">guilhermeneyra@gmail.com</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#" onclick="openTab(event, 'perfil')">Mi Perfil</a>
+										<a class="dropdown-item" href="#">Inbox</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Cerrar sesión</a>
+									</li>
+								</div>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar">
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+
+					<ul class="nav nav-primary" id="myDIV">
+
+						<li class="nav-item btn-item sb-active">
+							<a onclick="openTab(event, 'home')" id="defaultOpen">
+								<i class="fas fa-chart-bar"></i>
+								<p>Dashboard</p>
+							</a>
+						</li>
+
+						<li class="nav-item btn-item">
+							<a data-toggle="collapse" href="#administracion">
+								<i class="fas fa-copy"></i>
+								<p>Administración</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="administracion">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="#" onclick="openTab(event, 'usuario')">
+											<span class="sub-item">Usuario</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'empresa')">
+											<span class="sub-item">Empresa</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'programaciones')">
+											<span class="sub-item">Programaciones</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'producto')">
+											<span class="sub-item">Producto</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<li class="nav-item btn-item">
+							<a data-toggle="collapse" href="#operaciones">
+								<i class="fas fa-copy"></i>
+								<p>Operaciones</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="operaciones">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="#" onclick="openTab(event, 'compras')">
+											<span class="sub-item">Compras</span>
+										</a>
+									</li>
+									<!-- <li>
+										<a href="#" onclick="openTab(event, 'empresa')">
+											<span class="sub-item">Empresa</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'producto')">
+											<span class="sub-item">Producto</span>
+										</a>
+									</li> -->
+								</ul>
+							</div>
+						</li>
+
+						<li class="nav-item btn-item">
+							<a data-toggle="collapse" href="#ventas">
+								<i class="fas fa-file-alt"></i>
+								<p>Ventas</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="ventas">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="#" onclick="openTab(event, 'boleta')">
+											<span class="sub-item">Boletas</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'factura')">
+											<span class="sub-item">Facturas</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'notaCredito')">
+											<span class="sub-item">Notas de Crédito</span>
+										</a>
+									</li>
+									<!-- <li>
+										<a href="#" onclick="openTab(event, 'notaDeDebito')">
+											<span class="sub-item">Notas de Débito</span>
+										</a>
+									</li> -->
+								</ul>
+							</div>
+						</li>
+
+						<li class="nav-item btn-item">
+							<a data-toggle="collapse" href="#reportes">
+								<i class="fas fa-chart-line"></i>
+								<p>Reportes</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="reportes">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="#" onclick="openTab(event, 'reporteVentas')">
+											<span class="sub-item">R. Ventas</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'reporteContable')">
+											<span class="sub-item">R. Contable</span>
+										</a>
+									</li>
+									<li>
+										<a href="#" onclick="openTab(event, 'reporteColaborador')">
+											<span class="sub-item">R. Colaboradores</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<!-- <li class="nav-item btn-item">
+							<a onclick="openTab(event, 'mensajes_profesor')">
+								<i class="fas fa-chart-line"></i>
+								<p>Reportes</p>
+							</a>
+						</li> -->
+
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		<div class="main-panel">
+			<div class="content">
+
+				<!-- Content Home Dashboard -->
+				<div id="home" class="tabcontent">
+					<div class="header-content">
+						<h2 class="title-content">Dashboard</h2>
+						<!-- <nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">Dashboard</li>
+							</ol>
+						</nav> -->
+					</div>
+
+					<div class="row card-group">
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Line chart</h4>
+									<canvas id="lineChart"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Bar chart</h4>
+									<canvas id="barChart"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row card-group">
+						<div class="col-lg-6  ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Area chart</h4>
+									<canvas id="areaChart"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6  ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Doughnut chart</h4>
+									<canvas id="doughnutChart"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row card-group">
+						<div class="col-lg-6  -lg-0 ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Pie chart</h4>
+									<canvas id="pieChart"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6  -lg-0 ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Scatter chart</h4>
+									<canvas id="scatterChart"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row card-group">
+						<div class="col-lg-6  -lg-0 ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Line Chart Multi</h4>
+									<canvas id="linechart-multi"></canvas>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6  -lg-0 ">
+							<div class="card">
+								<div class="card-body">
+									<h4 class="card-title">Area Chart Multi</h4>
+									<canvas id="areachart-multi"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- fin content Home Dashboard -->
+
+				<!-- Content perfil -->
+				<div id="perfil" class="tabcontent">
+
+					<div class="card card-profile">
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active" aria-current="page">Mi Perfil</li>
+							</ol>
+						</nav>
+
+						<div class="header_profile">
+							<img src="img/users/profile1.jpg" alt="avatar" class="avatar-img rounded-circle avatar-xxl">
+
+							<div class="">
+								<h1 class="profile-name">Guilherme Neyra</h1>
+								<a href="#" data-toggle="modal" data-target=".modal-cambio-contra">Cambiar mi contraseña</a>
+							</div>
+						</div>
+
+						<div class="body_profile">
+
+							<div class="box_title_body">
+								<h1 class="title-content">Mis datos</h1>
+								<button type="button" class="btn btn-outline-dark" onclick="openTab(event, 'editar_perfil')">
+									<i class="fas fa-pen"></i>
+									EDITAR PERFIL
+								</button>
+							</div>
+
+							<ul class="list_profile">
+								<li>Nombres:<span>Guilherme</span></li>
+								<li>Apellidos:<span>Neyra Oliveira</span></li>
+								<li>DNI:<span>48567854</span></li>
+								<li>Fecha de nacimiento:<span>26/10/1976</span></li>
+								<li>Dirección:<span>Av. Javier Prado Oeste 438, dpt 507</span></li>
+								<li>Distrito:<span>Magdalena del Mar</span></li>
+								<li>Celular:<span>952 145 875</span></li>
+								<li>Correo electrónico:<span>mcelis@gmail.com</span></li>
+							</ul>
+
+						</div>
+
+					</div>
+
+				</div>
+				<!-- fin content perfil -->
+
+				<!-- Content editar perfil -->
+				<div id="editar_perfil" class="tabcontent">
+
+					<div class="card card-profile">
+
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#" onclick="openTab(event, 'perfil')">Mi Perfil</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Editar perfil</li>
+							</ol>
+						</nav>
+
+						<div class="header_profile mb-0">
+							<img src="img/users/profile1.jpg" alt="avatar" class="avatar-img rounded-circle avatar-xxl">
+
+							<div class="box-input-pic">
+								<label for="myfile">Cambiar foto</label>
+								<input type="file" id="myfile" name="myfile">
+								<span>JPG, PNG. Tamaño máximo 80K</span>
+							</div>
+						</div>
+						<a href="#" data-toggle="modal" data-target=".modal-cambio-contra">Cambiar mi contraseña</a>
+
+						<div class="box-edit-profile">
+							<form class="form-login">
+
+								<div class="form-row">
+									<div class="form-group col-md-5">
+										<label for="editName">Nombres</label>
+										<input type="text" class="form-control" id="editName">
+										<span class="text-help small">Escriba sus nombres</span>
+									</div>
+
+									<div class="form-group col-md-5">
+										<label for="editLastName">Apellidos</label>
+										<input type="text" class="form-control" id="editLastName">
+										<span class="text-help small">Escriba sus Apellidos</span>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-md-5">
+										<label for="editId">DNI</label>
+										<input type="number" class="form-control" id="editId">
+										<span class="text-help small">Escriba su número de documento</span>
+									</div>
+
+									<div class="form-group col-md-5">
+										<label for="datepicker">Fecha de nacimiento</label>
+										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+											</div>
+										</div>
+										<span class="text-help small">seleccione su fecha de nacimiento</span>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-md-5">
+										<label for="editAddress">Dirección</label>
+										<input type="text" class="form-control" id="editAddress">
+										<span class="text-help small">Escriba su dirección</span>
+									</div>
+
+									<div class="form-group col-md-5">
+										<label for="exampleFormControlSelect1">Distrito</label>
+										<select class="form-control" id="exampleFormControlSelect1">
+											<option>Seleccione</option>
+											<option>Breña</option>
+											<option>Lince</option>
+											<option>Miraflores</option>
+											<option>Surco</option>
+										</select>
+										<span class="text-help small">Selccione su distrito</span>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-group col-md-5">
+										<label for="editCellphone">Celular</label>
+										<input type="number" class="form-control" id="editCellphone">
+										<span class="text-help small">Escriba su número de celular</span>
+									</div>
+
+									<div class="form-group col-md-5">
+										<label for="exampleInputEmail1">Correo electrónico</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+										<span class="text-help small">Correo no válido</span>
+									</div>
+								</div>
+
+								<div class="col-md-10">
+									<div class="wrap-btn-center btn-size2">
+										<button type="button" class="btn btn-outline-dark btn-rounded" onclick="openTab(event, 'perfil')">Cancelar</button>
+										<button type="submit" class="btn btn-principal btn-rounded">Guardar</button>
+									</div>
+
+								</div>
+
+							</form>
+						</div>
+
+
+					</div>
+
+				</div>
+				<!-- fin content editar perfil -->
+
+				<!-- ADMINISTRACION -->
+
+				<!-- Content Usuario -->
+				<div id="usuario" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Empresa</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>COLMENA</option>
+												<option>PRIZE</option>
+												<option>SPARK</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevo-usuario">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Usuarios</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable" id="tableUsuarios">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Usuario</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Estado</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>ACAMERO</td>
+											<td>ALONSO CAMERO</td>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>DNAPURI</td>
+											<td>DAYANA NAPURI</td>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>KRIVERA</td>
+											<td>KARINA RIVERA</td>
+											<td>ACTIVO</td>
+										</tr>
+
+									</tbody>
+								</table>
+
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Fin Content Usuario -->
+				<!-- Content Empresa -->
+				<div id="empresa" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Empresa</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>CLIENTES TOP</option>
+												<option>CLIENTES MEDIOS</option>
+												<option>CLIENTES BAJOS</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Ejecutivo</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>ALONZO CAMERO CHAVEZ</option>
+												<option>RICHARD RIVERA</option>
+												<option>DAYANA NAPURI</option>
+												<option>EVA MARTINEZ</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevo-empresa">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Empresa</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable table-empresa" id="tableEmpresa">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">RUC</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Dirección</th>
+											<th scope="col">Tipo de Empresa</th>
+											<th scope="col">Ejecutivo</th>
+											<th scope="col">Acciones</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>20422293699</td>
+											<td>GAS PERÚ S.A.C. </td>
+											<td>AV. PASEO DE LA REPÚBLICA 3817 AV. PASEO DE LA REPÚBLICA 3817</td>
+											<td>CLIENTES MEDIOS</td>
+											<td>ALONSO CAMERO</td>
+											<td>
+												<div class="wrap-btns-action">
+													<span data-toggle="modal" data-target=".modal-nuevo-empresa">
+														<button type="button" class="btn btn-action btn-alert" data-toggle="tooltip" data-placement="left" title="Editar empresa">
+															<span class="material-icons">
+																create
+															</span>
+														</button>
+													</span>
+													<span data-toggle="modal" data-target=".modal-eliminar-empresa">
+														<button type="button" class="btn btn-action btn-delete" data-toggle="tooltip" data-placement="left" title="Eliminar empresa">
+															<span class="material-icons">
+																delete
+															</span>
+														</button>
+													</span>
+													<span>
+														<button type="button" id="btn-agregarSede" class="btn btn-action btn-add" data-toggle="tooltip" data-placement="left" title="Agregar sede">
+															<span class="material-icons">
+																add
+															</span>
+														</button>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>20131312955</td>
+											<td>SUNAT</td>
+											<td>JIRON DE LA UNION 1040 - LIMA</td>
+											<td>CLIENTES TOP</td>
+											<td>EVA MARTINEZ</td>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>20100164010</td>
+											<td>MELENDEZ INTERNACIONAL</td>
+											<td>CALLE JORGE CHAVEZ 154 MIRAFLORES</td>
+											<td>CLIENTES MEDIOS</td>
+											<td>DAYANA NAPURI</td>
+											<td>ACTIVO</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Fin Content Empresa -->
+
+				<!-- Content Sede -->
+				<div id="sede" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="#" id="volverEmpresa">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Library</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevo-empresa">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Empresa</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable table-empresa" id="tableEmpresa-">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">RUC</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Dirección</th>
+											<th scope="col">Tipo de Empresa</th>
+											<th scope="col">Ejecutivo</th>
+											<th scope="col">Acciones</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>20422293699</td>
+											<td>GAS PERÚ S.A.C. </td>
+											<td>AV. PASEO DE LA REPÚBLICA 3817 AV. PASEO DE LA REPÚBLICA 3817</td>
+											<td>CLIENTES MEDIOS</td>
+											<td>ALONSO CAMERO</td>
+											<td>
+												<div class="wrap-btns-action">
+													<span data-toggle="modal" data-target=".modal-nuevo-empresa">
+														<button type="button" class="btn btn-action btn-alert" data-toggle="tooltip" data-placement="left" title="Editar empresa">
+															<span class="material-icons">
+																create
+															</span>
+														</button>
+													</span>
+													<span data-toggle="modal" data-target=".modal-eliminar-empresa">
+														<button type="button" class="btn btn-action btn-delete" data-toggle="tooltip" data-placement="left" title="Eliminar empresa">
+															<span class="material-icons">
+																delete
+															</span>
+														</button>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>20131312955</td>
+											<td>SUNAT</td>
+											<td>JIRON DE LA UNION 1040 - LIMA</td>
+											<td>CLIENTES TOP</td>
+											<td>EVA MARTINEZ</td>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>20100164010</td>
+											<td>MELENDEZ INTERNACIONAL</td>
+											<td>CALLE JORGE CHAVEZ 154 MIRAFLORES</td>
+											<td>CLIENTES MEDIOS</td>
+											<td>DAYANA NAPURI</td>
+											<td>ACTIVO</td>
+										</tr>
+
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Fin Content Sede -->
+
+				<!-- Content Programaciones -->
+				<div id="programaciones" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Empresa</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>TODAS LAS EMPRESAS</option>
+												<option>BEE</option>
+												<option>MINISTERIO DEL AMBIENTE</option>
+												<option>OLVA CURIER SAC</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango de fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Ejecutivo</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>TODOS LOS EJECUTIVOS</option>
+												<option>CARLOS TAMASHIRO</option>
+												<option>ERICK ALIAGA</option>
+											</select>
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" id="btn-nuevaProgramacion" class="btn btn-principal">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Programaciones</h1>
+							<button type="button" name="button" class="btn btn-outline-rounded">
+								Generar reporte
+							</button>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable table-empresa" id="tableProgramaciones">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Empresa</th>
+											<th scope="col">Fecha Inicio</th>
+											<th scope="col">Fecha Fin</th>
+											<th scope="col">Ejecutivo</th>
+											<th scope="col">Acciones</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>COLMENA SOLUTIONS S.A.C.</td>
+											<td>11-02-2021</td>
+											<td>30-12-2021</td>
+											<td>ERICK ALIAGA</td>
+											<td>
+												<div class="wrap-btns-action">
+													<span>
+														<button type="button" id="btn-editarProgramacion" class="btn btn-action btn-alert" data-toggle="tooltip" data-placement="left" title="Editar programación">
+															<span class="material-icons">
+																create
+															</span>
+														</button>
+													</span>
+													<span data-toggle="modal" data-target=".modal-eliminar-programacion">
+														<button type="button" class="btn btn-action btn-delete" data-toggle="tooltip" data-placement="left" title="Eliminar programación">
+															<span class="material-icons">
+																delete
+															</span>
+														</button>
+													</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Fin Content Programaciones -->
+
+				<!-- Content Nueva Programación -->
+				<div id="nueva-programacion" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-12">
+							<nav aria-label="breadcrumb">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item volverProgramaciones">
+										<a href="#">
+											<span class="material-icons-outlined">
+												arrow_back
+											</span>
+										</a>
+									</li>
+									<li class="breadcrumb-item volverProgramaciones"><a href="#">Programaciones</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Agregar Programación</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+
+					<div class="container">
+
+						<div class="row justify-content-center">
+							<div class="card card-content card-nueva-programacion">
+								<div class="header-card-content">
+									<h1 class="title-content">Agregar programación</h1>
+								</div>
+								<div class="body-card-content">
+									<form class="form-programacion-fechas">
+										<div class="form-group">
+											<label for="inputState">Empresa</label>
+											<select id="inputState" class="form-control select2">
+												<option selected>SELECCIONAR EMPRESA</option>
+												<option>DELOSI</option>
+												<option>SAN FERNANDO</option>
+											</select>
+											<small class="text-help">Campo obligatorio</small>
+										</div>
+
+										<div class="form-group">
+											<label for="inputEjecutivo">Ejecutivo</label>
+											<input type="text" class="form-control" id="inputEjecutivo" value="ERICK ALIAGA" disabled>
+											<small class="text-help">Campo obligatorio</small>
+										</div>
+
+										<div class="content-fieldset-fechas-programacion">
+											<fieldset class="fs-nueva-fecha-programacion">
+												<div class="header-fs-nueva-fecha-programacion">
+													<label class="label-form">
+														Agrega fecha de programación
+													</label>
+													<button type="button" class="btn btn-action btn-delete" data-toggle="tooltip" data-placement="left" title="Eliminar esta programación">
+														<span class="material-icons">
+															delete
+														</span>
+													</button>
+												</div>
+												<div class="form-group">
+													<input type="text" name="date_range" class="form-control rangePicker">
+												</div>
+												<fieldset class="form-group">
+													<label>Productos</label>
+													<div class="custom-control custom-radio form-check-inline">
+														<input type="radio" id="radioHideProgramacion" name="customRadio" class="custom-control-input" checked="">
+														<label class="custom-control-label" for="radioHideProgramacion">
+															Programar todos los productos
+														</label>
+													</div>
+													<div class="custom-control custom-radio form-check-inline">
+														<input type="radio" id="radioShowProgramacion" name="customRadio" class="custom-control-input">
+														<label class="custom-control-label" for="radioShowProgramacion">
+															Programación personalizada
+														</label>
+													</div>
+													<div class="content-btn-editar-productos">
+														<button type="button" name="button" class="btn btn-secundario" data-toggle="modal" data-target=".modal-programacion-personalizada">
+															Editar productos
+														</button>
+													</div>
+												</fieldset>
+											</fieldset>
+
+											<fieldset class="fs-nueva-fecha-programacion">
+												<div class="header-fs-nueva-fecha-programacion">
+													<label class="label-form">
+														Agrega fecha de programación
+													</label>
+													<button type="button" class="btn btn-action btn-delete" data-toggle="tooltip" data-placement="left" title="Eliminar esta programación">
+														<span class="material-icons">
+															delete
+														</span>
+													</button>
+												</div>
+												<div class="form-group">
+													<!-- <label for="inputCodigoEjecutivo">Rango de fechas</label> -->
+													<input type="text" name="date_range" class="form-control rangePicker">
+												</div>
+												<fieldset class="form-group">
+													<label>Productos</label>
+													<div class="custom-control custom-radio form-check-inline">
+														<input type="radio" id="radioHideProgramacion2" name="customRadio2" class="custom-control-input" checked="">
+														<label class="custom-control-label" for="radioHideProgramacion2">
+															Programar todos los productos
+														</label>
+													</div>
+													<div class="custom-control custom-radio form-check-inline">
+														<input type="radio" id="radioShowProgramacion2" name="customRadio2" class="custom-control-input">
+														<label class="custom-control-label" for="radioShowProgramacion2">
+															Programación personalizada
+														</label>
+													</div>
+													<div class="content-btn-editar-productos2">
+														<button type="button" name="button" class="btn btn-secundario" data-toggle="modal" data-target=".modal-programacion-personalizada">
+															Editar productos
+														</button>
+													</div>
+												</fieldset>
+											</fieldset>
+										</div>
+										<div class="content-btn-agregar-fecha-programacion">
+											<button type="button" name="button" class="btn btn-add">
+												Agregar nueva fecha
+											</button>
+										</div>
+									</form>
+								</div>
+								<div class="footer-card-content">
+									<button type="button" name="button" class="btn btn-link volverProgramaciones">
+										Cancelar
+									</button>
+									<button type="button" name="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-programacion-exitosa">
+										Guardar
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Fin Content Nueva Programación -->
+
+				<!-- Content Producto -->
+				<div id="producto" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>AT WORK</option>
+												<option>DELOSI</option>
+												<option>SAN FERNANDO</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-4">Modalidad</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>ONLINE</option>
+												<option>PRESENCIAL</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-4">Tipo Producto</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>ENTRADA ONLINE LIMA</option>
+												<option>ENTRADA ONLINE PROVINCIA</option>
+											</select>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevo-producto">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Producto</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable table-producto">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Tipo Negocio</th>
+											<th scope="col">Modalidad</th>
+											<th scope="col">Tipo de Producto</th>
+											<th scope="col">Días Válidos</th>
+											<th scope="col">Precio Compra</th>
+											<th scope="col">Precio Venta</th>
+											<th scope="col">Estado</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>C. PROV. MEDIANO</td>
+											<td>AT WORK </td>
+											<td>PRESENCIAL</td>
+											<td>COMBO PRESENCIAL PROVINCIA</td>
+											<td>LU-MA-MI-JU-VI-SA-DO-FE</td>
+											<td>6.00</td>
+											<TD>8.00</TD>
+											<td>ACTIVO</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- Fin Content Producto -->
+				<!-- FIN ADMINISTRACION -->
+
+				<!-- MÓDULO REPORTES -->
+				<!-- Content reporte de ventas -->
+				<div id="reporteVentas" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>AT WORK</option>
+												<option>BEE BENEFICIOS</option>
+												<option>CLASSMATE</option>
+												<option>PRIZE</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Empresas</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>BEE</option>
+												<option>MINISTERIO DEL AMBIENTE</option>
+												<option>OLVA CURIER SAC</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Producto</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>FRAPUCCINO GRANDE</option>
+												<option>CANASTA NAVIDEÑA PLUS</option>
+												<option>VALE DE PAVO 9 KG</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Ejecutivo</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>ALONZO CAMERO</option>
+												<option>RICHARD RIVERA</option>
+												<option>DAYANA NAPURI</option>
+												<option>EVA MARTINEZ</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal">
+								DESCARGAR REPORTE
+							</button>
+						</div>
+					</div>
+
+					<ul class="nav nav-pills nav-pills-border mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-home-tab-rVentas" data-toggle="pill" href="#pills-home-rVentas" role="tab" aria-controls="pills-home" aria-selected="true">
+								Tabla de datos
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-charts-tab-rVentas" data-toggle="pill" href="#pills-charts-rVentas" role="tab" aria-controls="pills-charts" aria-selected="false">
+								Gráficos
+							</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-home-rVentas" role="tabpanel" aria-labelledby="pills-home-tab-rVentas">
+							<div class="card card-content">
+								<div class="header-card-content">
+									<h1 class="title-content">Reporte Ventas</h1>
+								</div>
+
+								<div class="dtable-responsive">
+									<div class="wrap-table">
+										<table class="table table-hover dtable" id="tableReporteVentas">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">RUC</th>
+													<th scope="col">Empresa</th>
+													<th scope="col">Sede</th>
+													<th scope="col">Nombres</th>
+													<th scope="col">Apellido Paterno</th>
+													<th scope="col">Apellido Materno</th>
+													<th scope="col">Correo</th>
+													<th scope="col">Celular</th>
+													<th scope="col">Fecha Venta</th>
+													<th scope="col">Serie</th>
+													<th scope="col">Correlativo</th>
+													<th scope="col">Producto</th>
+													<th scope="col">Descripción</th>
+													<th scope="col">Cantidad</th>
+													<th scope="col">Precio</th>
+													<th scope="col">Total</th>
+													<th scope="col">N°Pedido</th>
+												</tr>
+											</thead>
+											<tbody class="body-table">
+												<tr class="row-table">
+													<th scope="row">1</th>
+													<td>20544921461</td>
+													<td>BEE</td>
+													<td>AV. ARENALES 1912 OF. 903</td>
+													<td>RICHARD</td>
+													<td>RIVERA</td>
+													<td>CASTAÑEDA</td>
+													<td>danielriverac1308@gmail.com</td>
+													<td>993503663</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>169</td>
+													<td>FRAPUCCINO GRANDE</td>
+													<td>MOCHA O CARAMEL</td>
+													<td>1</td>
+													<td>5.9</td>
+													<td>5.9</td>
+													<td>16067135</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">2</th>
+													<td>20492966658</td>
+													<td>MINISTERIO DEL AMBIENTE</td>
+													<td>AV.ANTONIO MIROQUESADA 425 - MAGDALENA</td>
+													<td>SILVIA</td>
+													<td>ESQUIVES</td>
+													<td>PEREZ</td>
+													<td>silviaesquives@hotmail.com</td>
+													<td>990802383</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>170</td>
+													<td>CANASTA NAVIDEÑA PLUS</td>
+													<td>PRODUCTOS VARIOS</td>
+													<td>1</td>
+													<td>79.9</td>
+													<td>79.9</td>
+													<td>16067545</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">3</th>
+													<td>20100686814</td>
+													<td>OLVA CURIER SAC</td>
+													<td>AV ARGENTINA 4458</td>
+													<td>ROSA MICAELA</td>
+													<td>CHICOMA</td>
+													<td>PIÑA</td>
+													<td>mica.chicoma@gmail.com</td>
+													<td>987929138</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>174</td>
+													<td>VALE DE PAVO 9KG</td>
+													<td>PAVO ENTERO CONGELADO</td>
+													<td>1</td>
+													<td>98.1</td>
+													<td>98.1</td>
+													<td>16067610</td>
+												</tr>
+
+											</tbody>
+										</table>
+
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-charts-rVentas" role="tabpanel" aria-labelledby="pills-charts-tab-rVentas">
+							<div class="row card-group">
+								<div class="col-lg-12">
+									<div class="card cardChartReporte">
+										<div class="card-body">
+											<h4 class="title-content mb-4">Reporte Ventas</h4>
+											<canvas id="barChartReporteVenta" class="barChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Fin Content reporte de ventas -->
+
+				<!-- Content reporte contable -->
+				<div id="reporteContable" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>AT WORK</option>
+												<option>BEE BENEFICIOS</option>
+												<option>CLASSMATE</option>
+												<option>PRIZE</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Empresas</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>BEE</option>
+												<option>MINISTERIO DEL AMBIENTE</option>
+												<option>OLVA CURIER SAC</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Producto</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>FRAPUCCINO GRANDE</option>
+												<option>CANASTA NAVIDEÑA PLUS</option>
+												<option>VALE DE PAVO 9 KG</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal">
+								DESCARGAR REPORTE
+							</button>
+						</div>
+					</div>
+
+					<ul class="nav nav-pills nav-pills-border mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-home-tab-rContable" data-toggle="pill" href="#pills-home-rContable" role="tab" aria-controls="pills-home" aria-selected="true">
+								Tabla de datos
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-charts-tab-rContable" data-toggle="pill" href="#pills-charts-rContable" role="tab" aria-controls="pills-charts" aria-selected="false">
+								Gráficos
+							</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-home-rContable" role="tabpanel" aria-labelledby="pills-home-tab-rContable">
+							<div class="card card-content">
+								<div class="header-card-content">
+									<h1 class="title-content">Reporte Contable</h1>
+								</div>
+
+								<div class="dtable-responsive">
+									<div class="wrap-table">
+										<table class="table table-hover dtable" id="tableReporteVentas">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">RUC</th>
+													<th scope="col">Empresa</th>
+													<th scope="col">Sede</th>
+													<th scope="col">Nombres</th>
+													<th scope="col">Apellido Paterno</th>
+													<th scope="col">Apellido Materno</th>
+													<th scope="col">Fecha Venta</th>
+													<th scope="col">Serie</th>
+													<th scope="col">Correlativo</th>
+													<th scope="col">Producto</th>
+													<th scope="col">Descripción</th>
+													<th scope="col">Cantidad</th>
+													<th scope="col">Precio</th>
+													<th scope="col">Total</th>
+													<th scope="col">N°Pedido</th>
+												</tr>
+											</thead>
+											<tbody class="body-table">
+												<tr class="row-table">
+													<th scope="row">1</th>
+													<td>20544921461</td>
+													<td>BEE</td>
+													<td>AV. ARENALES 1912 OF. 903</td>
+													<td>RICHARD</td>
+													<td>RIVERA</td>
+													<td>CASTAÑEDA</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>169</td>
+													<td>FRAPUCCINO GRANDE</td>
+													<td>MOCHA O CARAMEL</td>
+													<td>1</td>
+													<td>5.9</td>
+													<td>5.9</td>
+													<td>16067135</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">2</th>
+													<td>20492966658</td>
+													<td>MINISTERIO DEL AMBIENTE</td>
+													<td>AV.ANTONIO MIROQUESADA 425 - MAGDALENA</td>
+													<td>SILVIA</td>
+													<td>ESQUIVES</td>
+													<td>PEREZ</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>170</td>
+													<td>CANASTA NAVIDEÑA PLUS</td>
+													<td>PRODUCTOS VARIOS</td>
+													<td>1</td>
+													<td>79.9</td>
+													<td>79.9</td>
+													<td>16067545</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">3</th>
+													<td>20100686814</td>
+													<td>OLVA CURIER SAC</td>
+													<td>AV ARGENTINA 4458</td>
+													<td>ROSA MICAELA</td>
+													<td>CHICOMA</td>
+													<td>PIÑA</td>
+													<td>30/11/2020</td>
+													<td>BBB1</td>
+													<td>174</td>
+													<td>VALE DE PAVO 9KG</td>
+													<td>PAVO ENTERO CONGELADO</td>
+													<td>1</td>
+													<td>98.1</td>
+													<td>98.1</td>
+													<td>16067610</td>
+												</tr>
+
+											</tbody>
+										</table>
+
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-charts-rContable" role="tabpanel" aria-labelledby="pills-charts-tab-rContable">
+							<div class="row card-group">
+								<div class="col-lg-12">
+									<div class="card cardChartReporte">
+										<div class="card-body">
+											<h4 class="title-content mb-4">Reporte Contable</h4>
+											<canvas id="barChartReporteContable" class="barChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Fin content reporte contable -->
+
+				<!-- Content reporte Colaboradores -->
+				<div id="reporteColaborador" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<!-- <div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>At Work</option>
+												<option>Bee Beneficios</option>
+												<option>Classmate</option>
+												<option>Prize</option>
+
+											</select>
+										</div>
+									</div> -->
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Empresa</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>OLVA CURIER SAC</option>
+												<option>MIXERCON S.A</option>
+												<option>TELEPERFORMANCE PERÚ</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Sede</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>AV ARGENTINA 4458 </option>
+												<option>CAR.PANAMERICANA SUR KM.17.5 MZA. C LOTE. 4 ASOCIACION LA CONCORDIA (PARADERO LA CAPILLA KM 17.5 PAN-SUR) LIMA - LIMA - VILLA EL SALVADOR</option>
+												<option>TAV. JOSÉ FAUSTINO SÁNCHEZ CARRIÓN 465 EDIFICIO PERSHING TOWER - MAGDALENA</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Zonas</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>LIMA NORTE</option>
+												<option>LIMA CENTRO</option>
+												<option>LIMA SUR</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Distritos</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>BARRANCO</option>
+												<option>MAGDALENA</option>
+												<option>SAN MIGUEL</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal">
+								DESCARGAR REPORTE
+							</button>
+						</div>
+					</div>
+
+					<ul class="nav nav-pills nav-pills-border mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-home-tab-rColaborador" data-toggle="pill" href="#pills-home-rColaborador" role="tab" aria-controls="pills-home" aria-selected="true">
+								Tabla de datos
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-charts-tab-rColaborador" data-toggle="pill" href="#pills-charts-rColaborador" role="tab" aria-controls="pills-charts" aria-selected="false">
+								Gráficos
+							</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-home-rColaborador" role="tabpanel" aria-labelledby="pills-home-tab-rColaborador">
+							<div class="card card-content">
+								<div class="header-card-content">
+									<h1 class="title-content">Reporte Colaborador</h1>
+								</div>
+
+								<div class="dtable-responsive">
+									<div class="wrap-table">
+										<table class="table table-hover dtable tableReporteColaborador" id="tableReporteVentas">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">Empresa</th>
+													<th scope="col">Sede</th>
+													<th scope="col">Nombres</th>
+													<th scope="col">Apellido Paterno</th>
+													<th scope="col">Apellido Materno</th>
+													<th scope="col">Zona</th>
+													<th scope="col">Distrito</th>
+													<th scope="col">Fecha Ingreso</th>
+												</tr>
+											</thead>
+											<tbody class="body-table">
+												<tr class="row-table">
+													<th scope="row">1</th>
+													<td>OLVA CURIER SAC</td>
+													<td data-toggle="tooltip" data-placement="right" title="AV ARGENTINA 4458">
+														AV ARGENTINA 4458
+													</td>
+													<td>ZADITH MIRIAM </td>
+													<td>ALGUEDAS</td>
+													<td>YLLACONZA</td>
+													<td>LIMA SUR</td>
+													<td>SURCO</td>
+													<td>24/11/2020</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">2</th>
+													<td>MIXERCON S.A</td>
+													<td data-toggle="tooltip" data-placement="right" title="CAR.PANAMERICANA SUR KM.17.5 MZA. C LOTE. 4 ASOCIACION LA CONCORDIA (PARADERO LA CAPILLA KM 17.5 PAN-SUR) LIMA - LIMA - VILLA EL SALVADOR" data-trigger="hover">
+														CAR.PANAMERICANA SUR KM.17.5 MZA. C LOTE. 4 ASOCIACION LA CONCORDIA (PARADERO LA CAPILLA KM 17.5 PAN-SUR) LIMA - LIMA - VILLA EL SALVADOR
+													</td>
+													<td>MAX RICHARD</td>
+													<td>CONTRERAS</td>
+													<td>CONTRERAS</td>
+													<td>LIMA CENTRO</td>
+													<td>LINCE</td>
+													<td>24/11/2020</td>
+												</tr>
+												<tr class="row-table">
+													<th scope="row">3</th>
+													<td>TELEPERFORMANCE PERÚ</td>
+													<td data-toggle="tooltip" data-placement="right" title="AV. JOSÉ FAUSTINO SÁNCHEZ CARRIÓN 465 EDIFICIO PERSHING TOWER - MAGDALENA">
+														AV. JOSÉ FAUSTINO SÁNCHEZ CARRIÓN 465 EDIFICIO PERSHING TOWER - MAGDALENA
+													</td>
+													<td>ALONSO MARCELO</td>
+													<td>SANCHEZ</td>
+													<td>ZUNIGA</td>
+													<td>LIMA NORTE</td>
+													<td>LOS OLIVOS</td>
+													<td>24/11/2020</td>
+												</tr>
+											</tbody>
+										</table>
+
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-charts-rColaborador" role="tabpanel" aria-labelledby="pills-charts-tab-rColaborador">
+							<div class="row card-group">
+								<div class="col-lg-12">
+									<div class="card cardChartReporte">
+										<div class="card-body">
+											<h4 class="title-content mb-4">Reporte Colaborador</h4>
+											<canvas id="barChartReporteColaborador" class="barChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Fin content reporte Colaboradores -->
+
+				<!-- FIN MÓDULO REPORTES -->
+
+				<!-- MÓDULO OPERACIONES -->
+				<!-- Content Compras -->
+				<div id="compras" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>At Work</option>
+												<option>Bee Beneficios</option>
+												<option>Classmate</option>
+												<option>Prize</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nueva-compra">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<ul class="nav nav-pills nav-pills-border mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-home-tab-compras" data-toggle="pill" href="#pills-home-compras" role="tab" aria-controls="pills-home" aria-selected="true">
+								Tabla de datos
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-charts-tab-compras" data-toggle="pill" href="#pills-charts-compras" role="tab" aria-controls="pills-charts" aria-selected="false">
+								Gráficos
+							</a>
+						</li>
+					</ul>
+
+					<div class="tab-content" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-home-compras" role="tabpanel" aria-labelledby="pills-home-tab-compras">
+							<div class="card card-content">
+								<div class="header-card-content">
+									<h1 class="title-content">Compras</h1>
+								</div>
+
+								<div class="dtable-responsive">
+									<div class="wrap-table">
+										<table class="table table-hover dtable" id="tableReporteVentas">
+											<thead>
+												<tr>
+													<th scope="col">#</th>
+													<th scope="col">Producto</th>
+													<th scope="col">Tipo Negocio</th>
+													<th scope="col">Modalidad</th>
+													<th scope="col">Orden Compra</th>
+													<th scope="col">Lote</th>
+													<th scope="col">Ejecutivo</th>
+													<th scope="col">Fecha Inicio</th>
+													<th scope="col">Fecha Fin</th>
+													<th scope="col">Precio Compra</th>
+													<th scope="col">Cantidad</th>
+													<th scope="col">Total</th>
+													<th scope="col">Estado</th>
+												</tr>
+											</thead>
+											<tbody class="body-table">
+												<tr class="row-table">
+													<th scope="row">1</th>
+													<td>ENTRADA PROVINCIA ESTÁNDAR</td>
+													<td>AT WORK</td>
+													<td>ONLINE</td>
+													<td>69</td>
+													<td>77371</td>
+													<td>LAURA SALINAS</td>
+													<td>11/03/2020</td>
+													<td>15/10/2020</td>
+													<td>4.50</td>
+													<td>100</td>
+													<td>450</td>
+													<td>ACTIVO</td>
+												</tr>
+
+
+											</tbody>
+										</table>
+
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="tab-pane fade" id="pills-charts-compras" role="tabpanel" aria-labelledby="pills-charts-tab-compras">
+							<div class="row card-group">
+								<div class="col-lg-12">
+									<div class="card cardChartReporte">
+										<div class="card-body">
+											<h4 class="title-content mb-4">Compras</h4>
+											<canvas id="barChartCompras" class="barChart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- Fin content Compras -->
+				<!-- FIN MÓDULO OPERACIONES -->
+
+				<!-- Content Boleta -->
+				<div id="boleta" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>At Work</option>
+												<option>Bee Beneficios</option>
+												<option>Classmate</option>
+												<option>Prize</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nueva-boleta">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Boletas</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable" id="tableBoletas">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Estado</th>
+											<th scope="col">Documento</th>
+											<th scope="col">Cliente / Proveedor</th>
+											<th scope="col">Correlativo</th>
+											<th scope="col">F. Emisión</th>
+											<th scope="col">F. Vencimiento</th>
+											<th scope="col">Monto</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- fin content Boleta -->
+
+				<!-- Content Factura -->
+				<div id="factura" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>At Work</option>
+												<option>Bee Beneficios</option>
+												<option>Classmate</option>
+												<option>Prize</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nueva-factura">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Facturas</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable" id="facturas">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Estado</th>
+											<th scope="col">Documento</th>
+											<th scope="col">Cliente / Proveedor</th>
+											<th scope="col">Correlativo</th>
+											<th scope="col">F. Emisión</th>
+											<th scope="col">F. Vencimiento</th>
+											<th scope="col">Monto</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Raúl Gonzales Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>María Escalante Solis</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+				<!-- fin content Factura -->
+
+				<!-- Content Nota Credito -->
+				<div id="notaCredito" class="tabcontent">
+
+					<div class="row header-content">
+						<div class="col-lg-6">
+							<form class="form-filtros row">
+								<fieldset class="col-md-9 fieldset-select">
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Tipo Negocio</label>
+										<div class="col-sm-8">
+											<select id="inputState" class="form-control select2">
+												<option selected>Seleccione</option>
+												<option>At Work</option>
+												<option>Bee Beneficios</option>
+												<option>Classmate</option>
+												<option>Prize</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label for="inputCodigoEjecutivo" class="col-sm-4">Rango Fechas</label>
+										<div class="col-sm-8">
+											<input type="text" name="date_range" class="form-control rangePicker">
+										</div>
+									</div>
+
+								</fieldset>
+								<fieldset class="col-md-3 fieldset-search">
+									<button type="submit" class="btn btn-secundario">Buscar</button>
+								</fieldset>
+							</form>
+						</div>
+						<div class="col-lg-6 header-content-btns">
+							<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nueva-notaCredito">
+								NUEVO
+							</button>
+						</div>
+					</div>
+
+					<div class="card card-content">
+
+						<div class="header-card-content">
+							<h1 class="title-content">Notas de Crédito</h1>
+						</div>
+
+						<div class="dtable-responsive">
+							<div class="wrap-table">
+								<table class="table table-hover dtable" id="tableBoletas">
+									<thead>
+										<tr>
+											<th scope="col">#</th>
+											<th scope="col">Estado</th>
+											<th scope="col">Documento</th>
+											<th scope="col">Cliente / Proveedor</th>
+											<th scope="col">Correlativo</th>
+											<th scope="col">F. Emisión</th>
+											<th scope="col">F. Vencimiento</th>
+											<th scope="col">Monto</th>
+										</tr>
+									</thead>
+									<tbody class="body-table">
+										<tr class="row-table">
+											<th scope="row">1</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">2</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+										<tr class="row-table">
+											<th scope="row">3</th>
+											<td>Aceptado</td>
+											<td>46198299</td>
+											<td>Manuel Farias Gonzales</td>
+											<td>BE45-00000620</td>
+											<td>2020-07-09</td>
+											<td>2020-07-09</td>
+											<td>S/ <span>21.00</span></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- fin content Nota Credito -->
+
+			</div>
+			<!-- fin content -->
+			<footer class="footer">
+				<div class="container-fluid">
+					<!-- <nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Item
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Item
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Item
+								</a>
+							</li>
+						</ul>
+					</nav> -->
+					<div class="copyright ml-auto">
+						Desarrollado por
+						<a href="#">
+							<img src="img/icons/logo-footer.png" alt="Colmena">
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+	</div>
+
+	<!-- MODALS -->
+
+	<div class="modal fade modal-info" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Información</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="pills-detalle-tab" data-toggle="pill" href="#pills-detalle" role="tab" aria-controls="pills-detalle" aria-selected="true">
+								Detalle
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-actividad-tab" data-toggle="pill" href="#pills-actividad" role="tab" aria-controls="pills-actividad" aria-selected="false">
+								Actividad
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="pills-documentos-tab" data-toggle="pill" href="#pills-documentos" role="tab" aria-controls="pills-documentos" aria-selected="false">
+								Documentos
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content content-info-pane" id="pills-tabContent">
+						<div class="tab-pane fade show active" id="pills-detalle" role="tabpanel" aria-labelledby="pills-detalle-tab">
+							<p>
+								Estado:
+							<div class="alert alert-success" role="alert">
+								ACEPTADO POR SUNAT
+							</div>
+							</p>
+							<p>
+								Razón social:
+								<span>
+									LEALVA S.A.C.
+								</span>
+							</p>
+							<p>
+								Tipo de comprobante:
+								<span>Boleta de Venta</span>
+							</p>
+							<p>
+								Fecha de registro:
+								<span>09-07-2020 / 17:19:07</span>
+							</p>
+							<p>
+								Fecha de última actvidad:
+								<span>10-07-2020 / 01:16:18</span>
+							</p>
+						</div>
+						<div class="tab-pane fade" id="pills-actividad" role="tabpanel" aria-labelledby="pills-actividad-tab">
+							<p>
+								10-07-2020 / 01:16:18
+							<div class="alert alert-success" role="alert">
+								ACEPTADO POR SUNAT
+							</div>
+							El Comprobante RC-20200709-1, ha sido aceptado
+							</p>
+							<p>
+								09-07-2020 / 17:19:07
+							<div class="alert alert-primary" role="alert">
+								PROCESADO
+							</div>
+							El comprobante se ha procesado correctamente
+							</p>
+							<p>
+								09-07-2020 / 17:19:07
+							<div class="alert alert-info2" role="alert">
+								ENVIADO
+							</div>
+							Comprobante enviado para ser procesado
+							</p>
+							<p>
+								09-07-2020 / 17:19:07
+							<div class="alert alert-warning" role="alert">
+								GENERADO
+							</div>
+							Comprobante por Enviar
+							</p>
+
+						</div>
+						<div class="tab-pane fade" id="pills-documentos" role="tabpanel" aria-labelledby="pills-documentos-tab">
+							<p>
+								Sin documentos
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-email" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Enviar por Correo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Email:</label>
+							<input type="text" class="form-control" id="recipient-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="col-form-label">Mensaje: (Opcional)</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-dark" data-dismiss="modal">CANCELAR</button>
+					<button type="button" class="btn btn-principal">ENVIAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nueva-boleta" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Nueva Boleta</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns">
+						<button type="button" class="btn btn-secundario">EMITIR</button>
+					</div>
+					<div class="header-boleta">
+						<form>
+							<div class="box-form">
+								<label class="label-box-form">Cabecera</label>
+
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Tipo de operación</label>
+										<select id="inputState" class="form-control">
+											<option selected>Venta Interna</option>
+											<option>Exportación</option>
+											<option>No Domiciliados</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="inputState">Moneda</label>
+										<select id="inputState" class="form-control">
+											<option selected>S/</option>
+											<option>€</option>
+											<option>US$</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputState">Serie</label>
+										<select id="inputState" class="form-control">
+											<option selected>BE01</option>
+											<option>BE02</option>
+											<option>BE03</option>
+											<option>BI01</option>
+											<option>BI02</option>
+											<option>BI03</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputState">Cliente</label>
+										<div class="input-group">
+											<select id="buscarCliente-" class="form-control form-control-select2-">
+												<option selected>ACEROS CHILCA SAC</option>
+												<option>ADEXUS PERU SA</option>
+												<option>AEGIS PERU SA</option>
+											</select>
+										</div>
+
+									</div>
+									<div class="form-group col-md-2">
+										<label>Agregar</label>
+										<div class="input-group">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevoCliente">
+												NUEVO CLIENTE
+											</button>
+
+										</div>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="datepicker">F. Emisión</label>
+										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Cuerpo</label>
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Producto/Servicio</label>
+										<select id="inputState" class="form-control">
+											<option selected>Seleccionar</option>
+											<option>1 TAKE HOME / UNIDAD</option>
+											<option>COMBO GIGANTE / UNIDAD</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="inputDesc">Descripción</label>
+										<input type="text" class="form-control" id="inputDesc">
+									</div>
+									<div class="form-group col">
+										<label for="inputCantidad">Cantidad</label>
+										<input type="number" class="form-control" id="inputCantidad" value="1">
+									</div>
+									<div class="form-group col">
+										<label for="inputState">IGV</label>
+										<select id="inputState" class="form-control">
+											<option selected>Gravado - Operación Onerosa</option>
+											<option>Exonerado - Operación Onerosa</option>
+											<option>Inafecto - Operación Onerosa</option>
+											<option>[Gratuita] Inafecta - Retiro por bonificación</option>
+										</select>
+									</div>
+									<div class="form-group col">
+										<label for="inputPrecioUnitario">P. Uni.</label>
+										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
+									</div>
+									<div class="form-group col">
+										<label for="inputSubTotal">Sub Total</label>
+										<input type="number" class="form-control" id="inputSubTotal" value="9.32" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="inputICBPER">ICBPER</label>
+										<input type="number" class="form-control" id="inputICBPER" value="0" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total">Total</label>
+										<input type="number" class="form-control" id="Total" value="11" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total text-white">Eliminar</label>
+										<button type="button" class="btn btn-eliminar">
+											<i class="fas fa-trash-alt"></i>
+										</button>
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="button" class="btn btn-principal">AGREGAR PRODUCTO</button>
+								</div>
+							</div>
+							<div class="box-form">
+								<div class="form-row flex-center">
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="Guía: 01">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarGuia">
+												GUÍAS DE REMISIÓN
+											</button>
+										</div>
+									</div>
+
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="OC-100">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarOrden">
+												ORDEN DE COMPRA
+											</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Pie de Página</label>
+								<div class="form-row flex-between">
+									<div class="form-group col-md-5 textArea-group">
+										<label for="message-text" class="col-form-label">Observación: (Opcional)</label>
+										<textarea class="form-control" id="message-text" rows="2"></textarea>
+									</div>
+
+									<div class="form-group col-md-6">
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>% Descuento</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " max="100" min="0" name="descuentoF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exonerada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="exoneradaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exportación</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="exportacionF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Inafecta</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="inafectaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gravada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gravadaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>IGV</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="igvF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>ICBPER</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="icbpreTotal" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gratuita</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gratuitaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Otros Cargos</label>
+											</div>
+											<div class="col-sm-4">
+
+												<input validarnumero="" class="form-control form-control-sm mb-1 text-right  " min="0" name="otrosCargosF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Descuento Total (-)</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="descuentoTotalF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Total S/</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="totalF" readonly="" type="text">
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nueva-factura" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Nueva Factura</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns">
+						<button type="button" class="btn btn-secundario">EMITIR</button>
+					</div>
+					<div class="header-boleta">
+						<form>
+							<div class="box-form">
+								<label class="label-box-form">Cabecera</label>
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Tipo de operación</label>
+										<select id="inputState" class="form-control">
+											<option selected>Venta Interna</option>
+											<option>Exportación</option>
+											<option>No Domiciliados</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="inputState">Moneda</label>
+										<select id="inputState" class="form-control">
+											<option selected>S/</option>
+											<option>€</option>
+											<option>US$</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputState">Serie</label>
+										<select id="inputState" class="form-control">
+											<option selected>BE01</option>
+											<option>BE02</option>
+											<option>BE03</option>
+											<option>BI01</option>
+											<option>BI02</option>
+											<option>BI03</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4">
+										<label for="inputState">Cliente</label>
+										<select id="input-group" class="form-control select2">
+											<option selected>ACEROS CHILCA SAC</option>
+											<option>ADEXUS PERU SA</option>
+											<option>AEGIS PERU SA</option>
+										</select>
+									</div>
+
+									<div class="form-group col-md-2">
+										<label>Agregar</label>
+										<div class="input-group">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevoCliente">
+												NUEVO CLIENTE
+											</button>
+										</div>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="datepicker">F. Emisión</label>
+										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<!-- <div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar "></i>
+											</div> -->
+										</div>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="datepicker2">F. Vencimiento</label>
+										<div id="datepicker2" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<!-- <div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+											</div> -->
+										</div>
+									</div>
+
+
+								</div>
+
+
+
+								<div class="form-row col">
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioHide" name="customRadio" class="custom-control-input" checked="">
+										<label class="custom-control-label" for="radioHide">Contado</label>
+									</div>
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioShow" name="customRadio" class="custom-control-input">
+										<label class="custom-control-label" for="radioShow">Crédito</label>
+									</div>
+								</div>
+
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Cuerpo</label>
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Producto/Servicio</label>
+										<select id="inputState" class="form-control">
+											<option selected>Seleccionar</option>
+											<option>1 TAKE HOME / UNIDAD</option>
+											<option>COMBO GIGANTE / UNIDAD</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="inputDesc">Descripción</label>
+										<input type="text" class="form-control" id="inputDesc">
+									</div>
+									<div class="form-group col">
+										<label for="inputCantidad">Cantidad</label>
+										<input type="number" class="form-control" id="inputCantidad" value="1">
+									</div>
+									<div class="form-group col">
+										<label for="inputState">IGV</label>
+										<select id="inputState" class="form-control">
+											<option selected>Gravado - Operación Onerosa</option>
+											<option>Exonerado - Operación Onerosa</option>
+											<option>Inafecto - Operación Onerosa</option>
+											<option>[Gratuita] Inafecta - Retiro por bonificación</option>
+										</select>
+									</div>
+									<div class="form-group col">
+										<label for="inputPrecioUnitario">P. Uni.</label>
+										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
+									</div>
+									<div class="form-group col">
+										<label for="inputSubTotal">Sub Total</label>
+										<input type="number" class="form-control" id="inputSubTotal" value="9.32" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="inputICBPER">ICBPER</label>
+										<input type="number" class="form-control" id="inputICBPER" value="0" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total">Total</label>
+										<input type="number" class="form-control" id="Total" value="11" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total text-white">Eliminar</label>
+										<button type="button" class="btn btn-eliminar">
+											<i class="fas fa-trash-alt"></i>
+										</button>
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="button" class="btn btn-principal">AGREGAR PRODUCTO</button>
+								</div>
+							</div>
+							<div class="box-form">
+								<div class="form-row flex-center">
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="Guía: 01">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarGuia">
+												GUÍAS DE REMISIÓN
+											</button>
+										</div>
+									</div>
+
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="OC-100">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarOrden">
+												ORDEN DE COMPRA
+											</button>
+										</div>
+									</div>
+
+									<div class="form-group col-md-3 mb-0 form-plazos">
+										<input type="text" class="form-control mb-2" value="15">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarPlazos">
+												PLAZOS DE COBRO
+											</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Pie de Página</label>
+								<div class="form-row flex-between">
+									<div class="form-group col-md-5 textArea-group">
+										<label for="message-text" class="col-form-label">Observación: (Opcional)</label>
+										<textarea class="form-control" id="message-text" rows="2"></textarea>
+									</div>
+
+									<div class="form-group col-md-6">
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>% Descuento</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " max="100" min="0" name="descuentoF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exonerada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="exoneradaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exportación</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="exportacionF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Inafecta</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="inafectaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gravada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gravadaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>IGV</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="igvF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>ICBPER</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="icbpreTotal" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gratuita</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gratuitaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Otros Cargos</label>
+											</div>
+											<div class="col-sm-4">
+
+												<input validarnumero="" class="form-control form-control-sm mb-1 text-right  " min="0" name="otrosCargosF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Descuento Total (-)</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="descuentoTotalF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Total S/</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="totalF" readonly="" type="text">
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nueva-notaCredito" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Nueva Nota de Crédito</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns">
+						<button type="button" class="btn btn-secundario">EMITIR</button>
+					</div>
+					<div class="header-boleta">
+						<form>
+							<div class="box-form">
+								<label class="label-box-form">Cabecera</label>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputState">Tipo de Nota de Crédito</label>
+										<select id="inputState" class="form-control">
+											<option selected>Anulación de la operación</option>
+											<option>Anulación por error en el RUC</option>
+											<option>Corrección por error en la descripción</option>
+											<option>Descuento global</option>
+											<option>Devolución total</option>
+											<option>Devolución por item</option>
+											<option>Disminución en el valor</option>
+										</select>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputState">Serie</label>
+										<select id="inputState" class="form-control">
+											<option selected>BE01</option>
+											<option>BE02</option>
+											<option>BE03</option>
+											<option>BI01</option>
+											<option>BI02</option>
+											<option>BI03</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4">
+										<label for="inputState">Cliente</label>
+										<div class="input-group">
+											<select id="inputState" class="form-control">
+												<option selected>ACEROS CHILCA SAC</option>
+												<option>ADEXUS PERU SA</option>
+												<option>AEGIS PERU SA</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group col-md-2">
+										<label>Agregar</label>
+										<div class="input-group">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-nuevoCliente">
+												NUEVO CLIENTE
+											</button>
+										</div>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="datepicker">F. Emisión</label>
+										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+											</div>
+										</div>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="datepicker">F. Vencimiento</label>
+										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+											<div class="input-group-addon">
+												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-4">
+										<label for="inputState">Moneda</label>
+										<select id="inputState" class="form-control">
+											<option selected>S/</option>
+											<option>€</option>
+											<option>US$</option>
+										</select>
+									</div>
+									<div class="form-group col-md-4">
+										<label for="inputSerie">Serie (Doc. a modificar)</label>
+										<input type="text" class="form-control" id="inputSerie">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="inputImporte">Importe (Doc. a modificar)</label>
+										<input type="number" class="form-control" id="inputImporte">
+									</div>
+								</div>
+
+
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Cuerpo</label>
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="inputState">Producto/Servicio</label>
+										<select id="inputState" class="form-control">
+											<option selected>Seleccionar</option>
+											<option>1 TAKE HOME / UNIDAD</option>
+											<option>COMBO GIGANTE / UNIDAD</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="inputDesc">Descripción</label>
+										<input type="text" class="form-control" id="inputDesc">
+									</div>
+									<div class="form-group col">
+										<label for="inputCantidad">Cantidad</label>
+										<input type="number" class="form-control" id="inputCantidad" value="1">
+									</div>
+									<div class="form-group col">
+										<label for="inputState">IGV</label>
+										<select id="inputState" class="form-control">
+											<option selected>Gravado - Operación Onerosa</option>
+											<option>Exonerado - Operación Onerosa</option>
+											<option>Inafecto - Operación Onerosa</option>
+											<option>[Gratuita] Inafecta - Retiro por bonificación</option>
+										</select>
+									</div>
+									<div class="form-group col">
+										<label for="inputPrecioUnitario">P. Uni.</label>
+										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
+									</div>
+									<div class="form-group col">
+										<label for="inputSubTotal">Sub Total</label>
+										<input type="number" class="form-control" id="inputSubTotal" value="9.32" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="inputICBPER">ICBPER</label>
+										<input type="number" class="form-control" id="inputICBPER" value="0" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total">Total</label>
+										<input type="number" class="form-control" id="Total" value="11" disabled>
+									</div>
+									<div class="form-group col">
+										<label for="Total text-white">Eliminar</label>
+										<button type="button" class="btn btn-eliminar">
+											<i class="fas fa-trash-alt"></i>
+										</button>
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="button" class="btn btn-principal">AGREGAR PRODUCTO</button>
+								</div>
+							</div>
+							<div class="box-form">
+								<div class="form-row flex-center">
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="Guía: 01">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarGuia">
+												GUÍAS DE REMISIÓN
+											</button>
+										</div>
+									</div>
+
+									<div class="form-group col-md-3 mb-0">
+										<input type="text" class="form-control mb-2" value="OC-100">
+										<div class="text-center">
+											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarOrden">
+												ORDEN DE COMPRA
+											</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="box-form">
+								<label class="label-box-form">Pie de Página</label>
+								<div class="form-row flex-between">
+									<div class="form-group col-md-5 textArea-group">
+										<label for="message-text" class="col-form-label">Observación: (Opcional)</label>
+										<textarea class="form-control" id="message-text" rows="2"></textarea>
+									</div>
+
+									<div class="form-group col-md-6">
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>% Descuento</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " max="100" min="0" name="descuentoF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exonerada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="exoneradaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Exportación</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="exportacionF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Inafecta</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="inafectaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gravada</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gravadaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>IGV</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="igvF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>ICBPER</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="icbpreTotal" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Gratuita</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gratuitaF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Otros Cargos</label>
+											</div>
+											<div class="col-sm-4">
+
+												<input validarnumero="" class="form-control form-control-sm mb-1 text-right  " min="0" name="otrosCargosF" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Descuento Total (-)</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="descuentoTotalF" readonly="" type="text">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-8 text-right">
+												<label>Total S/</label>
+											</div>
+											<div class="col-sm-4">
+												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="totalF" readonly="" type="text">
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nuevoCliente modal-hover" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente/Proveedor</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns">
+						<button type="button" class="btn btn-principal">AGREGAR</button>
+					</div>
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Documento</label>
+								<select id="inputState" class="form-control">
+									<option selected>RUC</option>
+									<option>DNI</option>
+									<option>PASAPORTE</option>
+									<option>CARNE EXTRANJERIA</option>
+									<option>DOC.TRIB.DOM SIN RUC</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputNumber">Número</label>
+								<input type="number" class="form-control" id="inputNumber">
+							</div>
+							<div class="form-group col-md-12">
+								<label for="inputState">Razón Social/Nombre Completo</label>
+								<input type="text" class="form-control" id="inputNumber">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputAddress">Dirección</label>
+							<input type="text" class="form-control" id="inputAddress">
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-4">
+								<label for="inputState">Departamento</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccionar</option>
+									<option>LIMA</option>
+									<option>AREQUIPA</option>
+									<option>TACNA</option>
+									<option>TUMBES</option>
+								</select>
+							</div>
+							<div class="form-group col-md-4">
+								<label for="inputState">Provincia</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccionar</option>
+									<option>LIMA</option>
+								</select>
+							</div>
+							<div class="form-group col-md-4">
+								<label for="inputState">Distrito</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccionar</option>
+									<option>LINCE</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-4">
+								<label for="inputAddress">Email</label>
+								<input type="email" class="form-control" id="inputAddress">
+							</div>
+							<div class="form-group col-md-4">
+								<label for="inputNumber">Celular</label>
+								<input type="number" class="form-control" id="inputNumber">
+							</div>
+							<div class="form-group col-md-4">
+								<label for="inputNumber">Fijo</label>
+								<input type="number" class="form-control" id="inputNumber">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="custom-control custom-checkbox form-check-inline">
+								<input type="checkbox" class="custom-control-input" id="customControlCliente" checked="">
+								<label class="custom-control-label" for="customControlCliente">Cliente</label>
+							</div>
+							<div class="custom-control custom-checkbox form-check-inline">
+								<input type="checkbox" class="custom-control-input" id="customControlProveedor">
+								<label class="custom-control-label" for="customControlProveedor">Proveedor</label>
+							</div>
+							<div class="custom-control custom-checkbox form-check-inline">
+								<input type="checkbox" class="custom-control-input" id="customControlTransportista">
+								<label class="custom-control-label" for="customControlTransportista">Transportista</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-agregarGuia modal-hover" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Guías de Remisión</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns mb-4">
+						<button type="button" class="btn btn-principal">GUARDAR</button>
+					</div>
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-5">
+								<label for="inputNumber">Serie/Número</label>
+								<input type="number" class="form-control" id="inputNumber">
+							</div>
+							<div class="form-group col-md-5">
+								<label for="inputState">Tipo</label>
+								<select id="inputState" class="form-control">
+									<option selected>Guía de Remisión</option>
+								</select>
+							</div>
+							<div class="form-group col">
+								<label for="Total text-white">Eliminar</label>
+								<button type="button" class="btn btn-eliminar">
+									<i class="fas fa-trash-alt"></i>
+								</button>
+							</div>
+						</div>
+						<div class="text-center">
+							<button type="button" class="btn btn-principal">AGREGAR GUÍA DE REMISIÓN</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-agregarOrden modal-hover" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Orden de Compra</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns mb-4">
+						<button type="button" class="btn btn-principal">GUARDAR</button>
+					</div>
+					<form>
+						<div class="form-row">
+							<div class="form-group col">
+								<label for="inputNumber">Serie/Número</label>
+								<input type="number" class="form-control" id="inputNumber">
+							</div>
+
+						</div>
+						<div class="text-center">
+							<button type="button" class="btn btn-danger">ELIMINAR</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-agregarPlazos modal-hover" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Plazos de Cobro</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="header-modal-btns mb-4">
+						<button type="button" class="btn btn-principal">GUARDAR</button>
+					</div>
+					<form>
+
+						<div class="form-group col">
+							<label for="inputNumber">Días:</label>
+							<input type="number" class="form-control" id="inputNumber">
+						</div>
+
+						<div class="form-group col">
+							<label for="message-text" class="col-form-label">Otro plazo de cobro</label>
+							<textarea class="form-control" id="message-text"></textarea>
+						</div>
+
+						<div class="text-center">
+							<button type="button" class="btn btn-danger">ELIMINAR</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nuevo-usuario" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Nuevo Usuario</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputUsuario">Usuario</label>
+								<input type="text" class="form-control" id="inputUsuario">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo usuario</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Contabilidad</option>
+									<option>Liquidación</option>
+									<option>Ejecutivo ventas</option>
+									<option>Call center</option>
+									<option>Administración</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreUsuario">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreUsuario">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputApeUsuario">Apellido Paterno</label>
+								<input type="text" class="form-control" id="inputApeUsuario">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-editar-usuario" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Editar Usuario</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputUsuario">Usuario</label>
+								<input type="text" class="form-control" id="inputUsuario" value="gneyra">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo usuario</label>
+								<select id="inputState" class="form-control">
+									<option>Seleccione</option>
+									<option>Contabilidad</option>
+									<option>Liquidación</option>
+									<option selected>Ejecutivo ventas</option>
+									<option>Call center</option>
+									<option>Administración</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreUsuario">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreUsuario" value="Alonso">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputApeUsuario">Apellido Paterno</label>
+								<input type="text" class="form-control" id="inputApeUsuario" value="Camero">
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-activar-usuario" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Activar/Desactivar Usuario</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Esta seguro que desea <span>desactivar</span> al usuario <br>
+						<span>
+							Alonso Camero
+						</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Desactivar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-perfiles-usuario" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Perfiles Usuario</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="accordion" id="accordion">
+
+						<div class="card">
+							<a class="mb-0 d-flex justify-content-between align-items-center bg-white card-header tab-bg-gold" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<div class="d-flex flex-column">
+									<span class="font-weight-bold ">Administración</span>
+								</div>
+							</a>
+
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+								<div class="card-body">
+									<ul class="list-profiles list-group">
+										<li>
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="all custom-control-input" id="all">
+												<label class="custom-control-label" for="all">Todo</label>
+											</div>
+										</li>
+										<li>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlUsuarios">
+												<label class="custom-control-label" for="customControlUsuarios">Usuarios</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlEjecutivos">
+												<label class="custom-control-label" for="customControlEjecutivos">Ejecutivos</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlEmpresas">
+												<label class="custom-control-label" for="customControlEmpresas">Empresas</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="mb-0 d-flex justify-content-between align-items-center bg-white card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<div class="d-flex flex-column">
+									<span class="font-weight-bold ">Operaciones</span>
+								</div>
+							</a>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+								<div class="card-body">
+									<ul class="list-profiles list-group">
+										<li>
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="all custom-control-input" id="all2">
+												<label class="custom-control-label" for="all2">Todo</label>
+											</div>
+										</li>
+										<li>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlCompras">
+												<label class="custom-control-label" for="customControlCompras">Compras</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="mb-0 d-flex justify-content-between align-items-center bg-white card-header" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<div class="d-flex flex-column">
+									<span class="font-weight-bold ">Producto</span>
+								</div>
+							</a>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+								<div class="card-body">
+									<ul class="list-profiles list-group">
+										<li>
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="all custom-control-input" id="all3">
+												<label class="custom-control-label" for="all3">Todo</label>
+											</div>
+										</li>
+										<li>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlCompras">
+												<label class="custom-control-label" for="customControlCompras">Tipo de Producto</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlCategoria">
+												<label class="custom-control-label" for="customControlCategoria">Categoría</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlProducto">
+												<label class="custom-control-label" for="customControlProducto">Productos</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlZona">
+												<label class="custom-control-label" for="customControlZona">Zonas</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="mb-0 d-flex justify-content-between align-items-center bg-white card-header" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								<div class="d-flex flex-column">
+									<span class="font-weight-bold ">Cliente</span>
+								</div>
+							</a>
+							<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+								<div class="card-body">
+									<ul class="list-profiles list-group">
+										<li>
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="all custom-control-input" id="all4">
+												<label class="custom-control-label" for="all4">Todo</label>
+											</div>
+										</li>
+										<li>
+											<hr>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlTipoCliente">
+												<label class="custom-control-label" for="customControlTipoCliente">Tipo de Cliente</label>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="custom-control custom-checkbox form-check-inline">
+												<input type="checkbox" class="custom-control-input" id="customControlCliente">
+												<label class="custom-control-label" for="customControlCliente">Clientes</label>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nuevo-empresa" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Registrar Empresa</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputRUC">RUC</label>
+								<input type="number" class="form-control" id="inputRUC">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreEmpresa">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreEmpresa">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputNombreComercial">Nombre comercial (Opcional)</label>
+								<input type="text" class="form-control" id="inputNombreComercial">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo empresa</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Clientes Top</option>
+									<option>Clientes Medios</option>
+									<option>Clientes Bajos</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputDireccionEmpresa">Dirección (Opcional)</label>
+								<input type="text" class="form-control" id="inputDireccionEmpresa">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Ejecutivo</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>Alonso Camero</option>
+									<option>Eva Martinez</option>
+									<option>Dayana Napuri</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Logo (Opcional)</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+									<label class="custom-file-label" for="inputGroupFile03">Seleccionar archivo</label>
+									<span class="info">JPG o PNG. Peso máx. 200Kb</span>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputCodigoEmpresa">Código (Opcional)</label>
+								<input type="text" class="form-control" id="inputCodigoEmpresa">
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-editar-empresa" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Editar Empresa</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputRUC">RUC</label>
+								<input type="number" class="form-control" id="inputRUC">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreEmpresa">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreEmpresa">
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputNombreComercial">Nombre comercial (Opcional)</label>
+								<input type="text" class="form-control" id="inputNombreComercial">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo empresa</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Clientes Top</option>
+									<option>Clientes Medios</option>
+									<option>Clientes Bajos</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputDireccionEmpresa">Dirección (Opcional)</label>
+								<input type="text" class="form-control" id="inputDireccionEmpresa">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Ejecutivo</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>Alonso Camero</option>
+									<option>Eva Martinez</option>
+									<option>Dayana Napuri</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Logo (Opcional)</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+									<label class="custom-file-label" for="inputGroupFile03">Seleccionar archivo</label>
+								</div>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputCodigoEmpresa">Código (Opcional)</label>
+								<input type="text" class="form-control" id="inputCodigoEmpresa">
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-activar-empresa" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Activar/Desactivar Empresa</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Esta seguro que desea <span>desactivar</span> la empresa <br>
+						<span>
+							Melendez Internacional
+						</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Desactivar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nuevo-producto" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Nuevo Producto</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Negocio</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>AT WORK</option>
+									<option>DELOSI</option>
+									<option>SAN FERNANDO</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Modalidad</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Online</option>
+									<option>Presencial</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA ONLINE LIMA</option>
+									<option>ENTRADA ONLINE PROVINCIA</option>
+									<option>COMBO ONLINE LIMA</option>
+									<option>COMBO ONLINE PROVINCIA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreProducto">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreProducto">
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioCompra">Precio Compra</label>
+								<input type="number" class="form-control" id="inputPrecioCompra">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioVenta">Precio Venta</label>
+								<input type="number" class="form-control" id="inputPrecioVenta">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputCodigoProducto">Código Interno</label>
+								<input type="text" class="form-control" id="inputCodigoProducto">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoStockMin">Stock Mínimo</label>
+								<input type="number" class="form-control" id="inputProductoStockMin">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6 textArea-group">
+								<label for="textAreaDescripcion">Descripción / Contenido</label>
+								<textarea class="form-control" id="textAreaDescripcion" rows="2"></textarea>
+							</div>
+
+							<div class="form-group col-md-6 textArea-group">
+								<label for="textAreaRestriccion">Restricción</label>
+								<textarea class="form-control" id="textAreaRestriccion" rows="2"></textarea>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputProductoOrdenVenta">N° Orden Compra</label>
+								<input type="number" class="form-control" id="inputProductoOrdenVenta">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoOrdenReporte">N° Lote</label>
+								<input type="number" class="form-control" id="inputProductoOrdenReporte">
+							</div>
+						</div>
+
+						<label for="">Habilitar días</label>
+						<div class="form-row form-habilitar-dias">
+							<div class="col-md-12">
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox selectAll" id="customCheckAll">
+									<label class="custom-control-label" for="customCheckAll">Todo</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">Lun.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck2">
+									<label class="custom-control-label" for="customCheck2">Mar.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck3">
+									<label class="custom-control-label" for="customCheck3">Mié.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck4">
+									<label class="custom-control-label" for="customCheck4">Jue.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck5">
+									<label class="custom-control-label" for="customCheck5">Vie.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck6">
+									<label class="custom-control-label" for="customCheck6">Sáb.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck7">
+									<label class="custom-control-label" for="customCheck7">Dom.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheck8">
+									<label class="custom-control-label" for="customCheck8">Fer.</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group carga-img-producto col-lg-8">
+								<img src="img/productos/kfc/combo-kfc.png" alt="imagen producto" class="img-fluid">
+								<div class="box-input-file overflow-xh">
+									<label for="inputState">Archivo</label>
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+										<label class="custom-file-label" for="inputGroupFile03">Seleccionar archivo</label>
+										<span class="info">JPG, PNG. Tamaño máximo 80K</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-editar-producto" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Editar Producto</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Negocio</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>AT WORK</option>
+									<option>DELOSI</option>
+									<option>SAN FERNANDO</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Modalidad</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Online</option>
+									<option>Presencial</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA ONLINE LIMA</option>
+									<option>ENTRADA ONLINE PROVINCIA</option>
+									<option>COMBO ONLINE LIMA</option>
+									<option>COMBO ONLINE PROVINCIA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputNombreProducto">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreProducto">
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioCompra">Precio Compra</label>
+								<input type="number" class="form-control" id="inputPrecioCompra">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioVenta">Precio Venta</label>
+								<input type="number" class="form-control" id="inputPrecioVenta">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputCodigoProducto">Código</label>
+								<input type="text" class="form-control" id="inputCodigoProducto">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoStockMin">Stock Mínimo</label>
+								<input type="number" class="form-control" id="inputProductoStockMin">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6 textArea-group">
+								<label for="textAreaDescripcion">Descripción</label>
+								<textarea class="form-control" id="textAreaDescripcion" rows="2"></textarea>
+							</div>
+
+							<div class="form-group col-md-6 textArea-group">
+								<label for="textAreaRestriccion">Restricción</label>
+								<textarea class="form-control" id="textAreaRestriccion" rows="2"></textarea>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputProductoOrdenVenta">N° Orden Venta</label>
+								<input type="number" class="form-control" id="inputProductoOrdenVenta">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoOrdenReporte">N° Orden Reporte</label>
+								<input type="number" class="form-control" id="inputProductoOrdenReporte">
+							</div>
+						</div>
+
+						<label for="">Habilitar días</label>
+						<!-- <div class="form-row">
+							<div class="col-md-12">
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck1">
+									<label class="custom-control-label" for="customCheck1">Lun.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck2">
+									<label class="custom-control-label" for="customCheck2">Mar.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck3">
+									<label class="custom-control-label" for="customCheck3">Mié.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck4">
+									<label class="custom-control-label" for="customCheck4">Jue.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck5">
+									<label class="custom-control-label" for="customCheck5">Vie.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck6">
+									<label class="custom-control-label" for="customCheck6">Sáb.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck7">
+									<label class="custom-control-label" for="customCheck7">Dom.</label>
+								</div>
+								<div class="custom-control custom-checkbox custom-control-inline">
+									<input type="checkbox" class="custom-control-input" id="customCheck8">
+									<label class="custom-control-label" for="customCheck8">Fer.</label>
+								</div>
+							</div>
+						</div> -->
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-activar-producto" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Activar/Desactivar Producto</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Esta seguro que desea <span>desactivar</span> el producto <br>
+						<span>
+							C. PROV. MEDIANO
+						</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Desactivar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-cambio-contra" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Cambiar contraseña</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-12">
+								<label for="inputNombreUsuario">Nombre</label>
+								<input type="text" class="form-control" id="inputNombreUsuario" value="Guilherme Neyra" readonly>
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for="password-field">Contraseña actual</label>
+								<div class="input-group">
+									<input type="password" id="password-field" class="form-control" value="123456">
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+											<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for="new-password-field">Nueva Contraseña</label>
+								<div class="input-group">
+									<input type="password" id="new-password-field" class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+											<span toggle="#new-password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group col-md-12">
+								<label for="new-password-field-repeat">Repetir Nueva Contraseña</label>
+								<div class="input-group">
+									<input type="password" id="new-password-field-repeat" class="form-control">
+									<div class="input-group-append">
+										<button class="btn btn-outline-secondary" type="button" id="button-addon2">
+											<span toggle="#new-password-field-repeat" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-nueva-compra" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Agregar Compra</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Negocio</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>AT WORK</option>
+									<option>DELOSI</option>
+									<option>SAN FERNANDO</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Modalidad</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Online</option>
+									<option>Presencial</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA ONLINE LIMA</option>
+									<option>ENTRADA ONLINE PROVINCIA</option>
+									<option>COMBO ONLINE LIMA</option>
+									<option>COMBO ONLINE PROVINCIA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA LIMA ESTÁNDAR ONLINE</option>
+									<option>ENTRADA LIMA PLUS ONLINE</option>
+									<option>ENTRADA LIMA FULL ONLINE</option>
+									<option>ENTRADA LIMA PRIME PLUS ONLINE SIN REST.</option>
+									<option>ENTRADA LIMA PRIME FULL ONLINE SIN REST.</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioCompra">Precio Compra</label>
+								<input type="number" class="form-control" id="inputPrecioCompra" value="7.00" readonly>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Ejecutivo</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ALONZO CAMERO</option>
+									<option>DAYANA NAPURI</option>
+									<option>EVA MARTINEZ</option>
+									<option>KARINA RIVERA</option>
+									<option>RICHARD RIVERA</option>
+									<option>VERÓNICA RIVERA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="datepicker">F. Carga</label>
+								<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+									<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+									<!-- <div class="input-group-addon">
+										<i class="far fa-calendar-alt input-icon js-btn-calendar "></i>
+									</div> -->
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="datepicker2">F. Vencimiento</label>
+								<div id="datepicker2" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+									<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+									<!-- <div class="input-group-addon">
+										<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+									</div> -->
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputCodigoProducto">Código</label>
+								<input type="text" class="form-control" id="inputCodigoProducto">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoStockMin">Stock Mínimo</label>
+								<input type="number" class="form-control" id="inputProductoStockMin">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-3">
+								<label for="inputProductoOrdenVenta">N° Orden Compra</label>
+								<input type="number" class="form-control" id="inputProductoOrdenVenta">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label for="inputProductoOrdenReporte">N° Lote</label>
+								<input type="number" class="form-control" id="inputProductoOrdenReporte">
+							</div>
+
+							<div class="form-group col-md-6 overflow-xh">
+								<label for="inputState">Archivo</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+									<label class="custom-file-label" for="inputGroupFile03">Seleccionar archivo</label>
+									<span class="info">Formato Excel</span>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-editar-compra" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Editar Compra</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Negocio</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>AT WORK</option>
+									<option>DELOSI</option>
+									<option>SAN FERNANDO</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Modalidad</label>
+								<select id="inputState" class="form-control">
+									<option selected>Seleccione</option>
+									<option>Online</option>
+									<option>Presencial</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputState">Tipo Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA ONLINE LIMA</option>
+									<option>ENTRADA ONLINE PROVINCIA</option>
+									<option>COMBO ONLINE LIMA</option>
+									<option>COMBO ONLINE PROVINCIA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Producto</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ENTRADA LIMA ESTÁNDAR ONLINE</option>
+									<option>ENTRADA LIMA PLUS ONLINE</option>
+									<option>ENTRADA LIMA FULL ONLINE</option>
+									<option>ENTRADA LIMA PRIME PLUS ONLINE SIN REST.</option>
+									<option>ENTRADA LIMA PRIME FULL ONLINE SIN REST.</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+
+							<div class="form-group col-md-6">
+								<label for="inputPrecioCompra">Precio Compra</label>
+								<input type="number" class="form-control" id="inputPrecioCompra" value="7.00" readonly>
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Ejecutivo</label>
+								<select id="inputState" class="form-control select2">
+									<option selected>Seleccione</option>
+									<option>ALONZO CAMERO</option>
+									<option>DAYANA NAPURI</option>
+									<option>EVA MARTINEZ</option>
+									<option>KARINA RIVERA</option>
+									<option>RICHARD RIVERA</option>
+									<option>VERÓNICA RIVERA</option>
+								</select>
+								<small class="text-help">Campo obligatorio</small>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="datepicker">F. Carga</label>
+								<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+									<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+									<!-- <div class="input-group-addon">
+										<i class="far fa-calendar-alt input-icon js-btn-calendar "></i>
+									</div> -->
+								</div>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="datepicker2">F. Vencimiento</label>
+								<div id="datepicker2" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
+									<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
+									<!-- <div class="input-group-addon">
+										<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
+									</div> -->
+								</div>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputCodigoProducto">Código</label>
+								<input type="text" class="form-control" id="inputCodigoProducto">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputProductoStockMin">Stock Mínimo</label>
+								<input type="number" class="form-control" id="inputProductoStockMin">
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-3">
+								<label for="inputProductoOrdenVenta">N° Orden Compra</label>
+								<input type="number" class="form-control" id="inputProductoOrdenVenta">
+							</div>
+
+							<div class="form-group col-md-3">
+								<label for="inputProductoOrdenReporte">N° Lote</label>
+								<input type="number" class="form-control" id="inputProductoOrdenReporte">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputState">Archivo</label>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+									<label class="custom-file-label" for="inputGroupFile03">Seleccionar archivo</label>
+									<span class="info">Formato Excel</span>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-eliminar-compra" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Eliminar Compra</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Esta seguro que desea <span>eliminar</span> la carga de la compra <br>
+						<span>
+							E. PROVINCIA ESTÁNDAR ONLINE - OC 69 - LOTE 77371
+						</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-danger">Desactivar</button>
+					<button type="button" class="btn btn-principal" data-dismiss="modal">Cancelar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-eliminar-empresa" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Eliminar Empresa</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Esta seguro que desea <span>eliminar</span> la empresa <br>
+						<span>
+							GAS PERÚ SAC
+						</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-eliminar-programacion" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Eliminar Programación</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						¿Estas seguro de eliminar la programación de la empresa <span>Colmena Solutions S.A.C. del 11-02-2021 al 31-12-2021</span>?
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-programacion-exitosa" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Programación exitosa</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						<span>Colmena Solutions S.A.C.</span> <br>
+						del 11-02-2021 al 31-02-2021 <br>
+						del 11-04-2021 al 31-04-2021
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-principal" data-dismiss="modal">Aceptar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-programacion-personalizada" id="exampleModalLong" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog  modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Programación personalizada</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p class="de-question">
+						Elige los productos que deseas programar:
+					</p>
+
+					<div class="accordion accordion-custom accordion-programacion-proveedores" id="accordion-programacion-proveedores">
+						<div class="custom-control custom-checkbox content-checkbox-all">
+							<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckAll">
+							<label class="custom-control-label" for="customCheckAll">Marcar todos</label>
+						</div>
+						<div class="card">
+							<div class="card-header collapsed" id="headingOneDesk" data-toggle="collapse" data-target="#collapseOneDesk" aria-expanded="true" aria-controls="collapseOneDesk" data-parent="#accordion-programacion-proveedores">
+
+								<div class="custom-control custom-checkbox content-checkbox">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProveedor1">
+									<label class="custom-control-label" for="customCheckProveedor1">Proveedor 1</label>
+								</div>
+
+							</div>
+							<div id="collapseOneDesk" class="collapse" aria-labelledby="headingOneDesk" data-parent="#accordion">
+								<div class="card-body">
+									<div class="accordion accordion-custom accordion-programacion-marcas" id="accordion-programacion-marcas">
+										<div class="card">
+											<div class="card-header collapsed" id="headingOneDeskMarcas" data-toggle="collapse" data-target="#collapseOneDeskMarcas" aria-expanded="true" aria-controls="collapseOneDeskMarcas" data-parent="#accordion-programacion-marcas">
+
+												<div class="custom-control custom-checkbox content-checkbox">
+													<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckMarca1">
+													<label class="custom-control-label" for="customCheckMarca1">Marca 1</label>
+												</div>
+
+											</div>
+											<div id="collapseOneDeskMarcas" class="collapse" aria-labelledby="headingOneDeskMarcas" data-parent="#accordion">
+												<div class="card-body card-body-producto">
+													<div class="custom-control custom-checkbox content-checkbox">
+														<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProduct1">
+														<label class="custom-control-label" for="customCheckProduct1">Producto 1</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-header collapsed" id="headingTwoDeskMarcas" data-toggle="collapse" data-target="#collapseTwoDeskMarcas" aria-expanded="false" aria-controls="collapseTwoDeskMarcas"
+												data-parent="#accordion-programacion-proveedores">
+												<div class="custom-control custom-checkbox content-checkbox">
+													<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckMarca2">
+													<label class="custom-control-label" for="customCheckMarca2">Marca 2</label>
+												</div>
+											</div>
+											<div id="collapseTwoDeskMarcas" class="collapse" aria-labelledby="headingTwoDeskMarcas" data-parent="#accordion">
+												<div class="card-body card-body-producto">
+													<div class="custom-control custom-checkbox content-checkbox">
+														<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProduct2">
+														<label class="custom-control-label" for="customCheckProduct2">Producto 2</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header collapsed" id="headingTwoDesk" data-toggle="collapse" data-target="#collapseTwoDesk" aria-expanded="false" aria-controls="collapseTwoDesk" data-parent="#accordion-programacion-proveedores">
+								<div class="custom-control custom-checkbox content-checkbox">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProveedor2">
+									<label class="custom-control-label" for="customCheckProveedor2">Proveedor 2</label>
+								</div>
+							</div>
+							<div id="collapseTwoDesk" class="collapse" aria-labelledby="headingTwoDesk" data-parent="#accordion">
+								<div class="card-body">
+									<div class="accordion accordion-custom accordion-programacion-marcas" id="accordion-programacion-marcas2">
+										<div class="card">
+											<div class="card-header collapsed" id="headingThreeDeskMarcas" data-toggle="collapse" data-target="#collapseThreeDeskMarcas" aria-expanded="true" aria-controls="collapseThreeDeskMarcas" data-parent="#accordion-programacion-marcas">
+
+												<div class="custom-control custom-checkbox content-checkbox">
+													<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckMarca3">
+													<label class="custom-control-label" for="customCheckMarca3">Marca 3</label>
+												</div>
+
+											</div>
+											<div id="collapseThreeDeskMarcas" class="collapse" aria-labelledby="headingThreeDeskMarcas" data-parent="#accordion">
+												<div class="card-body card-body-producto">
+													<div class="custom-control custom-checkbox content-checkbox">
+														<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProduct3">
+														<label class="custom-control-label" for="customCheckProduct3">Producto 3</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header collapsed" id="headingTwoDesk" data-toggle="collapse" data-target="#collapseThreeDesk" aria-expanded="false" aria-controls="collapseThreeDesk" data-parent="#accordion-programacion-proveedores">
+								<div class="custom-control custom-checkbox content-checkbox">
+									<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProveedor3">
+									<label class="custom-control-label" for="customCheckProveedor3">Proveedor 3</label>
+								</div>
+							</div>
+							<div id="collapseThreeDesk" class="collapse" aria-labelledby="headingTwoDesk" data-parent="#accordion">
+								<div class="card-body">
+									<div class="accordion accordion-custom accordion-programacion-marcas" id="accordion-programacion-marcas3">
+										<div class="card">
+											<div class="card-header collapsed" id="headingThreeDeskMarcas" data-toggle="collapse" data-target="#collapseThreeDeskMarcas" aria-expanded="true" aria-controls="collapseThreeDeskMarcas" data-parent="#accordion-programacion-marcas">
+
+												<div class="custom-control custom-checkbox content-checkbox">
+													<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckMarca4">
+													<label class="custom-control-label" for="customCheckMarca4">Marca 4</label>
+												</div>
+
+											</div>
+											<div id="collapseThreeDeskMarcas" class="collapse" aria-labelledby="headingThreeDeskMarcas2" data-parent="#accordion">
+												<div class="card-body card-body-producto">
+													<div class="custom-control custom-checkbox content-checkbox">
+														<input type="checkbox" class="custom-control-input input-checkbox" id="customCheckProduct4">
+														<label class="custom-control-label" for="customCheckProduct4">Producto 4</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal" data-dismiss="modal">Guardar</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- FIN MODALS -->
+
+
+
+
+	<!--   Core JS Files   -->
+	<script src="js/bootstrap/jquery.3.2.1.min.js"></script>
+	<script src="js/bootstrap/popper.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<!-- <script src="js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script> -->
+
+	<!-- jQuery Scrollbar -->
+	<script src="js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+
+	<!-- Chart JS -->
+	<script src="js/plugin/chart.js/chart.min.js"></script>
+
+	<!-- Datatables -->
+	<script type="text/javascript" src="js/plugin/datatables/datatables.min.js"></script>
+
+	<script src="js/plugin/datepicker/moment.js"></script>
+	<script src="js/plugin/datepicker/daterangepicker.js"></script>
+	<script src="js/plugin/select2/select2.js"></script>
+
+	<script src="js/chart.js"></script>
+	<script src="js/main.js"></script>
+	<!-- <script src="js/prueba.js"></script> -->
+
+</body>
+
+</html>

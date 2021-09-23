@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #FFD403;
+  --secondary-color: #212529;
+  --success-color: #35cd3a;
+  --warning-color: #ffa534;
+  --danger-color: #f3545d;
+  --dark-color: #282a3c;
+  --white-color: #ffffff;
+  --black-color: #191919;
+  --border-color: #ced4da;
+  --bg-content: #F7F8F8;
+  --bg-transparent: transparent;
+  --bg-info2: #ffc1fa;
+  --bg-blue: #1572E8;
+  --text-color: #494E5A;
+  --text-info: #9e9ea7;
+  --text-label: #707A84;
+  --text-primary: #1572E8;
+}
+
+html {
+  font-size: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--secondary-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.btn-principal {
+  background-color: var(--primary-color);
+}
+
+.btn-principal:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-link {
+  color: var(--secondary-color);
+}
+
+.btn-link:hover {
+  color: var(--secondary-color);
+}
+
+.form-group label {
+  opacity: .9;
+  font-size: .9rem;
+  margin-bottom: 5px;
+}
+
+/* Navbar ----------------------- */
+
+.navbar {
+  background-color: #fff;
+  padding: .5rem 5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  /* background-color: pink; */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-brand img {
+  height: 2rem;
+}
+
+.navbar .nav-link {
+
+}
+
+/* Fin Navbar */
+
+/* main -------------------- */
+
+main {
+  /* background-color: palegreen; */
+  min-height: 92vh;
+}
+
+.wrap-img-login {
+  background-color: var(--bg-content);
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 56px;
+  text-align: center;
+}
+
+.wrap-img-login h1 {
+  z-index: 1000;
+  color: #fff;
+  font-size: 4em;
+  animation-duration: 1.5s !important; /*tiempo que dura la animación*/
+  animation-delay: 1.5s; /*tiempo de espera hasta que se produce la animación*/
+  /*  animation-iteration-count: infinite;*/
+}
+
+.wrap-img-login h1 span {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* form-login */
+
+.wrap-form-login {
+  background-color: var(--bg-content);
+  min-height: 92vh;
+  padding-top: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-form-login .card {
+  width: 25rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.wrap-form-login .card .card-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-login button {
+  margin-bottom: 1rem;
+}
+
+.form-login .btn-principal {
+  margin-top: 2rem;
+}
+
+.input-group-addon {
+  /* background-color: yellow; */
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group-addon a {
+  /* background-color: pink; */
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.input-group-password {
+  /* background-color: pink; */
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+
+
+.field-icon {
+  background-color: var(--white);
+  cursor: pointer;
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  margin-right: 11.250px;
+  position: relative;
+  z-index: 2;
+}
+
+/* fin form login */
+
+/* fin Main */
+
+footer {
+  background-color: #fff;
+  height: 8vh;
+  padding: .5rem 5rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+}
+
+footer .footer-brand {
+  /* background-color: yellow; */
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer .footer-brand:hover {
+  text-decoration: none;
+}
+
+footer .footer-brand img {
+  height: 2rem;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* fin Main */
+
+/* Modal Contraseña olvidada */
+  .modal-dialog {
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .modal .close:focus {
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .modal-header, .modal-footer {
+    border: none;
+  }
+
+  .modal-body {
+    /* background-color: pink; */
+    text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 0;
+  }
+
+  .modal-body img {
+    background-color: var(--primary-color);
+    height: 4rem;
+    padding: .5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5rem;
+  }
+
+  .modal .form-group {
+    text-align: left;
+  }
+
+  .text-help {
+    color: var(--danger-color);
+    font-size: 12px;
+    display: none;
+  }
+
+/* Fin modal contraseña olvidada */

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Login</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="img/icons/favicon.png" type="image/x-icon" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<script src="js/plugin/webfont/webfont.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<link href="css/fonts.min.css" rel="stylesheet" type="text/css">
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/mq-login.css">
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top container-fluid">
+
+		<a class="navbar-brand" href="#">
+			<img src="img/logos/imagotipo-bee.png" alt="imagotipo bee cloud">
+		</a>
+
+	</nav>
+
+	<main>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 wrap-img-login">
+					<h1 class="animated fadeInUp">
+						Sistema <span>Bee Cloud</span>
+					</h1>
+
+					<video autoplay muted loop>
+						<source src="video/login.mp4" type="video/mp4">
+					</video>
+
+				</div>
+				<div class="col-lg-6 wrap-form-login">
+					<div class="card shadow">
+						<div class="card-body">
+							<h5 class="card-title">Iniciar Sesión</h5>
+							<form class="form-login">
+								<div class="form-group">
+									<label for="inputEmail1">Correo electrónico</label>
+									<input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+									<small class="text-help">Correo no registrado</small>
+								</div>
+
+								<div class="form-group">
+									<label for="password-field">Contraseña</label>
+									<input id="password-field" type="password" class="form-control" name="password">
+									<span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+									<small class="text-help">Contraseña inválida</small>
+								</div>
+
+								<button type="submit" class="btn btn-principal btn-block">Ingresar</button>
+								<button type="button" class="btn btn-link btn-block" data-dismiss="modal" data-toggle="modal" data-target="#modalContraOlvidada">
+									¿Olvidaste tu contraseña?
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<footer>
+		<div class="container-fluid">
+
+			<a href="#" class="footer-brand">
+				Desarrollado por
+				<div class="d-flex align-items-center ml-2">
+					<img src="img/icons/logo-footer.png" alt="">
+				</div>
+			</a>
+
+		</div>
+	</footer>
+
+	<!-- Modals -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="modalContraOlvidada" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<!-- <span aria-hidden="true">&times;</span> -->
+						<span class="material-icons">
+							close
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<img src="img/icons/isotipo-bee.png" alt="">
+					<h5 class="modal-title" id="exampleModalLabel">¿Olvidaste tu contraseña?</h5>
+					<p>
+						Ingresa el correo con el que te resgistraste y te enviaremos un enlace para generar tu nueva contraseña
+					</p>
+					<div class="form-group">
+						<label for="inputEmail">Correo electrónico</label>
+						<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+						<small class="text-help">Este correo no está registrado, intenta nuevamente o regístrate</small>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-principal" data-dismiss="modal">Enviar enlace</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Fin Modals -->
+
+	<!--   Bootstrap JS Files   -->
+	<script src="js/bootstrap/jquery.3.2.1.min.js"></script>
+	<script src="js/bootstrap/popper.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+	<!-- <script src="js/main.js"></script> -->
+	<script src="js/login.js"></script>
+
+</body>
+
+</html>
