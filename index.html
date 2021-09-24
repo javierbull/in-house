@@ -214,7 +214,7 @@
 										<div class="form-group">
 										<!-- <label>Editar</label> -->
 										<div class="input-group">
-											<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-nuevoCliente">
+											<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-editarCliente">
 												<span class="material-icons">
 													create
 												</span>
@@ -607,6 +607,67 @@
 							<div class="form-group col-md-6">
 								<label for="inputCellNumber">Celular</label>
 								<input type="number" class="form-control" id="inputCellNumber">
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-principal" data-dismiss="modal">Guardar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade modal-editarCliente modal-hover" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Editar Cliente</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="inputName">Nombres</label>
+							<input type="text" class="form-control" id="inputName" value="ALONZO">
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputLastName">Apellido Paterno</label>
+								<input type="text" class="form-control" id="inputLastName" value="CAMERO">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label for="inputMotherLastName">Apellido Materno</label>
+								<input type="text" class="form-control" id="inputMotherLastName">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputTypeId">Documento</label>
+								<select id="inputTypeId" class="form-control select2" disabled>
+									<option selected>RUC</option>
+									<option>DNI</option>
+									<option>PASAPORTE</option>
+									<option>CARNE EXTRANJERIA</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputId">Número</label>
+								<input type="number" class="form-control" id="inputId" value="44459478" disabled>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputEmail">Email</label>
+								<input type="email" class="form-control" id="inputEmail" value="alianzascorporativas@bee.com.pe">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputCellNumber">Celular</label>
+								<input type="number" class="form-control" id="inputCellNumber" value="937277171">
 							</div>
 						</div>
 					</form>
