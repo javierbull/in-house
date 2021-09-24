@@ -53,8 +53,6 @@ $(document).ready(function() {
       },
     });
 
-
-
     var myCalendar = $('.js-datepicker');
     var isClick = 0;
 

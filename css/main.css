@@ -2675,6 +2675,7 @@ div.dataTables_wrapper div.dataTables_info {
   padding: 0;
   margin-bottom: 0;
   line-height: normal;
+  font-weight: 600;
 }
 
 .content-info-pane p {
