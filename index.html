@@ -203,7 +203,7 @@
 										<div class="form-group mr-2">
 											<label>Cliente</label>
 											<div class="input-group">
-												<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-nuevoCliente">
+												<button type="button" class="btn btn-add btn-icon" data-toggle="modal" data-target=".modal-nuevoCliente">
 													<span class="material-icons">
 														person_add
 													</span>
@@ -214,7 +214,7 @@
 										<div class="form-group">
 											<!-- <label>Editar</label> -->
 											<div class="input-group">
-												<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-editarCliente">
+												<button type="button" class="btn btn-alert btn-icon" data-toggle="modal" data-target=".modal-editarCliente">
 													<span class="material-icons">
 														create
 													</span>
@@ -267,7 +267,7 @@
 									</div>
 								</div>
 								<div class="d-flex justify-content-end">
-									<button type="button" class="btn btn-principal">AGREGAR PRODUCTO</button>
+									<button type="button" class="btn btn-add">AGREGAR PRODUCTO</button>
 								</div>
 							</div>
 
@@ -300,6 +300,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="box-form">
 								<label class="label-box-form">Pie de Página</label>
 								<div class="form-row flex-between">
@@ -309,99 +310,21 @@
 									</div>
 
 									<div class="form-group col-md-6">
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>% Descuento</label>
+										<div class="d-flex align-items-center justify-content-end">
+											<div class="text-right mr-2">
+												<label>Importe Total S/</label>
 											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " max="100" min="0" name="descuentoF" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Exonerada</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="exoneradaF" readonly="" type="text">
+											<div class="">
+												<input class="form-control form-control-sm text-right" id="" min="0" name="totalF" readonly="" type="text">
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Exportación</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="exportacionF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Inafecta</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="inafectaF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Gravada</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gravadaF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>IGV</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="igvF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>ICBPER</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right" id="" min="0" name="icbpreTotal" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Gratuita</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="gratuitaF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Otros Cargos</label>
-											</div>
-											<div class="col-sm-4">
-
-												<input validarnumero="" class="form-control form-control-sm mb-1 text-right  " min="0" name="otrosCargosF" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Descuento Total (-)</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="descuentoTotalF" readonly="" type="text">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-8 text-right">
-												<label>Total S/</label>
-											</div>
-											<div class="col-sm-4">
-												<input class="form-control form-control-sm mb-1 text-right  " id="" min="0" name="totalF" readonly="" type="text">
-											</div>
-										</div>
-
 									</div>
 
 								</div>
+							</div>
+
+							<div class="d-flex justify-content-end">
+								<button type="button" class="btn btn-principal">EMITIR BOLETA</button>
 							</div>
 						</form>
 

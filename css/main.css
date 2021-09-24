@@ -183,10 +183,12 @@ a:hover, a:focus {
 /* BACKGROUNDS COLORS */
 .btn-alert {
   background-color: var(--alert);
+  color: var(--lonely);
 }
 
 .btn-delete {
   background-color: var(--danger);
+  color: var(--lonely);
 }
 
 .btn-add {
