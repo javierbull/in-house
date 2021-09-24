@@ -179,7 +179,7 @@
 									<div class="form-group col-md-2">
 										<label for="datepicker">F. Emisión</label>
 										<div id="datepicker" class="input-group controls input-group-password" data-date-format="dd-mm-yyyy">
-											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly" >
+											<input class="form-control js-datepicker bg-transparent border-none" type="text" readonly="readonly">
 											<div class="input-group-addon">
 												<i class="far fa-calendar-alt input-icon js-btn-calendar"></i>
 											</div>
@@ -201,26 +201,26 @@
 
 									<div class="col-md-6 d-flex align-items-end">
 										<div class="form-group mr-2">
-										<label>Cliente</label>
-										<div class="input-group">
-											<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-nuevoCliente">
-												<span class="material-icons">
-													person_add
-												</span>
-											</button>
+											<label>Cliente</label>
+											<div class="input-group">
+												<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-nuevoCliente">
+													<span class="material-icons">
+														person_add
+													</span>
+												</button>
+											</div>
 										</div>
-									</div>
 
 										<div class="form-group">
-										<!-- <label>Editar</label> -->
-										<div class="input-group">
-											<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-editarCliente">
-												<span class="material-icons">
-													create
-												</span>
-											</button>
+											<!-- <label>Editar</label> -->
+											<div class="input-group">
+												<button type="button" class="btn btn-principal btn-icon" data-toggle="modal" data-target=".modal-editarCliente">
+													<span class="material-icons">
+														create
+													</span>
+												</button>
+											</div>
 										</div>
-									</div>
 									</div>
 
 								</div>
@@ -229,78 +229,75 @@
 							<div class="box-form">
 								<label class="label-box-form">Cuerpo</label>
 								<div class="form-row">
-									<div class="form-group col-md-3">
-										<label for="inputState">Producto/Servicio</label>
-										<select id="inputState" class="form-control">
-											<option selected>Seleccionar</option>
-											<option>1 TAKE HOME / UNIDAD</option>
-											<option>COMBO GIGANTE / UNIDAD</option>
+									<div class="form-group col-lg-2">
+										<label for="inputState">Código/Descripción</label>
+										<select id="inputState" class="form-control select2">
+											<option selected>Seleccione</option>
+											<option>EO13 - ENTRADA FULL ONLINE</option>
+											<option>EO11.5 - ENTRADA PLUS ONLINE</option>
+											<option>EO10 - ENTRADA ESTANDAR ONLINE</option>
 										</select>
 									</div>
-									<div class="form-group col-md-2">
-										<label for="inputDesc">Descripción</label>
-										<input type="text" class="form-control" id="inputDesc">
-									</div>
-									<div class="form-group col">
-										<label for="inputCantidad">Cantidad</label>
+									<div class="form-group">
+										<label for="inputCantidad col-lg-2">Cantidad</label>
 										<input type="number" class="form-control" id="inputCantidad" value="1">
 									</div>
-									<div class="form-group col">
-										<label for="inputState">IGV</label>
-										<select id="inputState" class="form-control">
-											<option selected>Gravado - Operación Onerosa</option>
-											<option>Exonerado - Operación Onerosa</option>
-											<option>Inafecto - Operación Onerosa</option>
-											<option>[Gratuita] Inafecta - Retiro por bonificación</option>
+									<div class="form-group col-lg-2">
+										<label for="inputState">U. Med.</label>
+										<select id="inputState" class="form-control select2" disabled>
+											<option selected>NIU</option>
 										</select>
 									</div>
-									<div class="form-group col">
+									<div class="form-group col-lg-2">
 										<label for="inputPrecioUnitario">P. Uni.</label>
 										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
 									</div>
-									<div class="form-group col">
-										<label for="inputSubTotal">Sub Total</label>
-										<input type="number" class="form-control" id="inputSubTotal" value="9.32" disabled>
+									<div class="form-group col-lg-2">
+										<label for="inputDscto">% Dscto</label>
+										<input type="text" class="form-control" id="inputDscto" value="0" disabled>
 									</div>
-									<div class="form-group col">
-										<label for="inputICBPER">ICBPER</label>
-										<input type="number" class="form-control" id="inputICBPER" value="0" disabled>
-									</div>
-									<div class="form-group col">
+									<div class="form-group col-lg-2">
 										<label for="Total">Total</label>
 										<input type="number" class="form-control" id="Total" value="11" disabled>
 									</div>
-									<div class="form-group col">
-										<label for="Total text-white">Eliminar</label>
-										<button type="button" class="btn btn-eliminar">
+									<div class="form-group d-flex align-items-end col">
+										<button type="button" class="btn btn-danger">
 											<i class="fas fa-trash-alt"></i>
 										</button>
 									</div>
 								</div>
-								<div class="text-center">
+								<div class="d-flex justify-content-end">
 									<button type="button" class="btn btn-principal">AGREGAR PRODUCTO</button>
 								</div>
 							</div>
+
 							<div class="box-form">
-								<div class="form-row flex-center">
-									<div class="form-group col-md-3 mb-0">
-										<input type="text" class="form-control mb-2" value="Guía: 01">
-										<div class="text-center">
-											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarGuia">
-												GUÍAS DE REMISIÓN
-											</button>
-										</div>
+								<label class="label-box-form">Tipo de pago</label>
+								<div class="form-row col">
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioEfectivo" name="customRadioPago" class="custom-control-input" checked="">
+										<label class="custom-control-label" for="radioEfectivo">Efectivo</label>
 									</div>
-
-									<div class="form-group col-md-3 mb-0">
-										<input type="text" class="form-control mb-2" value="OC-100">
-										<div class="text-center">
-											<button type="button" class="btn btn-principal" data-toggle="modal" data-target=".modal-agregarOrden">
-												ORDEN DE COMPRA
-											</button>
-										</div>
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioDebito" name="customRadioPago" class="custom-control-input">
+										<label class="custom-control-label" for="radioDebito">Débito</label>
 									</div>
-
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioCredito" name="customRadioPago" class="custom-control-input">
+										<label class="custom-control-label" for="radioCredito">Crédito</label>
+									</div>
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioPlanilla" name="customRadioPago" class="custom-control-input">
+										<label class="custom-control-label" for="radioPlanilla">Planilla</label>
+									</div>
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioYape" name="customRadioPago" class="custom-control-input">
+										<label class="custom-control-label" for="radioYape">Yape</label>
+									</div>
+									<div class="custom-control custom-radio form-check-inline">
+										<input type="radio" id="radioMastercard" name="customRadioPago" class="custom-control-input">
+										<label class="custom-control-label" for="radioMastercard">Mastercard</label>
+									</div>
 								</div>
 							</div>
 							<div class="box-form">
