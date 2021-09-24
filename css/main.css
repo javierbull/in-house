@@ -2564,8 +2564,6 @@ input::-webkit-inner-spin-button {
 .title-content {
   color: var(--text-color);
   font-size: 2rem;
-  border-left: 4px solid var(--primary-color);
-  padding-left: .5rem;
   margin-bottom: 2rem;
   line-height: 40px;
   font-weight: 600;
