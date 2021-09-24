@@ -228,8 +228,9 @@
 
 							<div class="box-form">
 								<label class="label-box-form">Cuerpo</label>
-								<div class="form-row">
-									<div class="form-group col-lg-2">
+								<div class="content-fieldset">
+									<fieldset class="fieldset-producto form-row mb-4">
+									<div class="form-group col-xl-6 col-md-6">
 										<label for="inputState">Código/Descripción</label>
 										<select id="inputState" class="form-control select2">
 											<option selected>Seleccione</option>
@@ -238,34 +239,84 @@
 											<option>EO10 - ENTRADA ESTANDAR ONLINE</option>
 										</select>
 									</div>
-									<div class="form-group">
-										<label for="inputCantidad col-lg-2">Cantidad</label>
+									<div class="form-group col-xl-1 col-md-2">
+										<label for="inputCantidad">Cantidad</label>
 										<input type="number" class="form-control" id="inputCantidad" value="1">
 									</div>
-									<div class="form-group col-lg-2">
+									<div class="form-group col-xl-1 col-md-4">
 										<label for="inputState">U. Med.</label>
 										<select id="inputState" class="form-control select2" disabled>
 											<option selected>NIU</option>
+											<option >KG</option>
+											<option >SIX PACK</option>
+											<option >TWELVE PACK</option>
+											<option >SIX PACK</option>
 										</select>
 									</div>
-									<div class="form-group col-lg-2">
+									<div class="form-group col-xl-1 col-md-3">
 										<label for="inputPrecioUnitario">P. Uni.</label>
 										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
 									</div>
-									<div class="form-group col-lg-2">
+									<div class="form-group col-xl-1 col-md-3">
 										<label for="inputDscto">% Dscto</label>
 										<input type="text" class="form-control" id="inputDscto" value="0" disabled>
 									</div>
-									<div class="form-group col-lg-2">
+									<div class="form-group col-xl-1 col-md-3">
 										<label for="Total">Total</label>
 										<input type="number" class="form-control" id="Total" value="11" disabled>
 									</div>
-									<div class="form-group d-flex align-items-end col">
+									<div class="form-group d-flex align-items-end col-xl-1 col-md-2">
 										<button type="button" class="btn btn-danger">
 											<i class="fas fa-trash-alt"></i>
 										</button>
 									</div>
+								</fieldset>
+
+									<fieldset class="fieldset-producto form-row mb-4">
+									<div class="form-group col-xl-6 col-md-6">
+										<label for="inputState">Código/Descripción</label>
+										<select id="inputState" class="form-control select2">
+											<option selected>Seleccione</option>
+											<option>EO13 - ENTRADA FULL ONLINE</option>
+											<option>EO11.5 - ENTRADA PLUS ONLINE</option>
+											<option>EO10 - ENTRADA ESTANDAR ONLINE</option>
+										</select>
+									</div>
+									<div class="form-group col-xl-1 col-md-2">
+										<label for="inputCantidad">Cantidad</label>
+										<input type="number" class="form-control" id="inputCantidad" value="1">
+									</div>
+									<div class="form-group col-xl-1 col-md-4">
+										<label for="inputState">U. Med.</label>
+										<select id="inputState" class="form-control select2" disabled>
+											<option selected>NIU</option>
+											<option >KG</option>
+											<option >SIX PACK</option>
+											<option >TWELVE PACK</option>
+											<option >SIX PACK</option>
+										</select>
+									</div>
+									<div class="form-group col-xl-1 col-md-3">
+										<label for="inputPrecioUnitario">P. Uni.</label>
+										<input type="number" class="form-control" id="inputPrecioUnitario" value="11">
+									</div>
+									<div class="form-group col-xl-1 col-md-3">
+										<label for="inputDscto">% Dscto</label>
+										<input type="text" class="form-control" id="inputDscto" value="0" disabled>
+									</div>
+									<div class="form-group col-xl-1 col-md-3">
+										<label for="Total">Total</label>
+										<input type="number" class="form-control" id="Total" value="11" disabled>
+									</div>
+									<div class="form-group d-flex align-items-end col-xl-1 col-md-2">
+										<button type="button" class="btn btn-danger">
+											<i class="fas fa-trash-alt"></i>
+										</button>
+									</div>
+								</fieldset>
 								</div>
+
+
 								<div class="d-flex justify-content-end">
 									<button type="button" class="btn btn-add">AGREGAR PRODUCTO</button>
 								</div>

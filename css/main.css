@@ -3098,3 +3098,17 @@ td {
   margin-bottom: 1rem;
 }
 /* FIN MÓDULO PROGRAMACIONES */
+
+/* BOLETAS IN HOUSE */
+.fieldset-producto {
+  border-bottom: 1px solid var(--border-color)
+}
+
+.fieldset-producto:last-child {
+  border-bottom: none;
+}
+
+.fieldset-producto:last-child .btn-danger {
+  display: none;
+}
+/* FIN BOLETAS IN HOUSE */
