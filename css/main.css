@@ -145,6 +145,12 @@ a:hover, a:focus {
   background-color: var(--danger-color);
 }
 
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn-action {
   padding: 10px;
   color: var(--white-color);
