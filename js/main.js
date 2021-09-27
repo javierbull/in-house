@@ -38,9 +38,20 @@ $(document).ready(function() {
 
   // DATE PICKER =======================
 
+
+
   try {
 
     moment.locale('es');
+
+    $('.js-datepicker-simple').daterangepicker({
+      "singleDatePicker": true,
+      locale: {
+        format: 'DD/MM/YYYY',
+        currentText: 'Hoy',
+        weekHeader: 'Sm',
+      },
+    });
 
     $('.js-datepicker').daterangepicker({
       "singleDatePicker": true,
